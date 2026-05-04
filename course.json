@@ -4,7 +4,7 @@
     "courseNumber": "COP 2551",
     "courseTitle": "Object-Oriented Programming 1",
     "units": 3,
-    "coverImage": "/course-content/images/programmer.jpg",
+    "coverImage": "/images/programmer.jpg",
     "description": [
         "(from the catalog:)",
         "This course is a continuation of structured programming concepts using the C# programming language.",
