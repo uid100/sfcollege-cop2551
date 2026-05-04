@@ -1,0 +1,97 @@
+{
+    "college": "sfcollege",
+    "instructor": "dan-sullivan",
+    "courseNumber": "COP 2551",
+    "courseTitle": "Object-Oriented Programming 1",
+    "units": 3,
+    "coverImage": "/course-content/images/programmer.jpg",
+    "description": [
+        "(from the catalog:)",
+        "This course is a continuation of structured programming concepts using the C# programming language.",
+        "This includes techniques for algorithm development, coding, and testing.",
+        "This course will delve into forms, controls, and events using event-driven programming concepts.",
+        "Students will develop programming solutions to reinforce new concepts and material presented in each chapter.\n",
+        "Each chapter will be in a module that will provide you with lecture notes, PowerPoint slides for note taking, videos and code demonstrations that illustrate/apply the chapter concepts. Additionally, you will find links to any quizzes or other assignments for the chapter."
+    ],
+    "prerequisites": "COP2000: Introduction to Programming,\nCOP2002: Programming Logic\n - each with a minimum grade of 'C'.",
+    "defaultSection": "su2026",
+    "contact": {
+        "instructorEmail": "daniel.sullivan@sfcollege.edu",
+        "officeHours": {
+            "location": "Remote",
+            "schedule": "weekly Wed 12:00P - 2:00P EST",
+            "label": "Wed 12P - 2P",
+            "zoomLink": "https://sfcollege.zoom.us/j/92446820828?pwd=NHNrYlNaZTBwUXk3Zy9BWnEzYzEydz09"
+        },
+        "discordLink": {
+            "label": "Discord: Code Bytes",
+            "url": "https://discord.gg/MpHjV4qgxZ"
+        },
+        "about": "preferred method of contact is via email. I will respond to emails within 24 hours on weekdays. Published office hours are times when I will be available on Zoom for real-time communication. If you need to meet at a different time, please email me to schedule an appointment.\nDiscord channels are also available for anytime communication with me and your classmates."
+    },
+    "outcomes": "outcomes/clo.json",
+    "objectives": "outcomes/slo.json",
+    "textbook": "materials/textbook.json",
+    "content": {
+        "modules": {
+            "00-implementation-notes": {
+                "title": "Module 00 - notes only",
+                "pages": {
+                    "implementation-note": { "1": "use *resource* for absolute (external) links", "2": "use *source* for course-repo relative (internal) links, courseBase + source" }
+                } },
+            "1": { 
+                "title": ".NET/C# & Data types, Variables, and Operators" },
+            "2": { 
+                "title": "Methods and Scope" },
+            "3": { 
+                "title": "Control Flow - Decision Making" },
+            "4": { 
+                "title": "Control Flow - Loops" },
+            "5": { 
+                "title": "Exception Handling" },
+            "6": { 
+                "title": "Introduction to Object-Oriented Programming (OOP)" },
+            "7": { 
+                "title": "Value types, references, enums & structs" },
+            "8": { 
+                "title": "Working with Arrays and Collections (Introduction)" },
+            "9": { 
+                "title": "Inheritance" },
+            "10": { 
+                "title": "Polymorphism and Interfaces" },
+            "11": { 
+                "title": "Properties and fields, Encapsulation and Access Modifiers" },
+            "12": { 
+                "title": "Wrap-up and Final Exam" 
+            },
+            "99": {
+                "title": "Module 99 - Additional Resources",
+                "pages": {
+                    "late-policy": { 
+                        "title": "Late Policy", 
+                        "type": "page", 
+                        "resource": "https://uid100.github.io/edu-core/shared/policies/late-policy.html"
+                    },
+                    "online": { 
+                        "title": "Online Classes", 
+                        "type": "page", 
+                        "resource": 
+                        "https://uid100.github.io/edu-core/shared/policies/online-classes.html"
+                    }
+                }
+            }
+        }
+    },
+    "templates": {
+        "syllabus": "core:syllabus",
+        "syllabus(override)": "syllabus/syllabus.html",
+        "policies": "policies/policies.html"
+    },
+    "materials": {
+        "required": "materials/required.html",
+        "recommended": "materials/recommended.html"
+    },
+    "gradingDetails": "grading/grading-details.html",
+    "accommodations": "accommodations/accommodations.html",
+    "topicOutline": "outline/outline.html"
+}
