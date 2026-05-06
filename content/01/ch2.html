@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/course-content/common/css/style.css">
+</head>
+
+<body>
+    <div id="top"> </div>
+    <div id="content-wrapper">
+        <div id="page-header">
+            <div class="row">
+                <div class="col-6 text-start">
+                    <a id="college-link" href="#" target="_blank">
+                        <img id="college-logo" class="logo" src="" alt="College Logo" />
+                    </a> <!-- #college-link -->
+                </div> <!-- .col-6 -->
+                <div class="col-6 text-end">
+                    <a id="course-home" href="#" target="parent">
+                        <figure><img id="cover-image" src="" alt="cover page image" class="course-home" />
+                        </figure>
+                    </a> <!-- #course-home -->
+                </div> <!-- .row -->
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="timeline">
+                        <div class="line"></div>
+                        <div id="start-marker" class="marker"></div>
+                        <div id="end-marker" class="marker"></div>
+                        <div id="current-marker" class="marker current-marker"></div>
+
+                        <div id="start-label" class="label"></div>
+                        <div id="end-label" class="label"></div>
+                        <div id="current-label" class="label current"></div>
+                    </div> <!-- #timeline -->
+                </div> <!-- .col-12 -->
+            </div> <!-- .row -->
+        </div> <!-- #page-header -->
+
+        <h1>&nbsp;</h1>
+        <div class="container my-4 px-2">
+            <div class="card"> <!-- .card overview -->
+                <div class="card-header">
+                    <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#overview" aria-expanded="true"
+                        aria-controls="overview">
+                        <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                        Chapter 2: Variables, operators, and expressions
+                    </button>
+                </div> <!-- .card-header -->
+                <div id="overview" class="collapse hide">
+                    <div class="card-body">
+                        <h3>Introduction</h3>
+                        <p>
+                            There is a lot of content in chapter 2. Much of it should feel like review from other
+                            languages with subtle syntax differences. Don't be in too big of a hurry, as this will
+                            lay a solid foundation and provide a good resource for quick answers until things start
+                            to stick.
+                        </p>
+                        <p>
+                            Chapter 2 dives into the fundamental building blocks of C# programming: variables,
+                            operators, and expressions. It explains how to work with statements, the individual
+                            instructions that make up a program.
+                        </p>
+                        <p>
+                            You should already be familiar with sequential logic, which is the basis of most programming
+                            languages. C# is no different. It executes statements in the order they are written,
+                            from top to bottom. This is called sequential logic. You will learn about the different
+                            types of statements in C# and how to use them to control the flow of your program.
+                        </p>
+                    </div> <!-- .card-body -->
+                </div> <!-- .collapse -->
+            </div> <!-- .card (overview) -->
+
+            <div class="card"> <!-- .card identifiers-->
+                <div class="card-header">
+                    <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#identifiers" aria-expanded="true"
+                        aria-controls="identifiers">
+                        <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                        identifiers
+                    </button>
+                </div> <!-- .card-header -->
+                <div id="identifiers" class="collapse hide">
+                    <div class="card-body">
+                        <h2>Working with identifiers</h2>
+                        <p>
+                            A significant portion of the chapter deals with identifiers, the names you give to various
+                            elements in your code, such as variables, constants, classes, and methods.
+                        </p>
+                        <p>
+                            The chapter details the rules for creating valid identifiers and perhaps doesn't go far
+                            enough to stress best practices for choosing descriptive and meaningful names. Consistent
+                            and clear naming conventions are crucial for code readability, maintainability, and
+                            collaboration, even extends to the importance of filename conventions for project
+                            organization.
+                        </p>
+                        <p>
+                            The purpose and content of your files and code should be clear from the names you choose.
+                            This is a skill that develops over time, but you should always strive to make your code
+                            as self-documenting as possible. This means that someone reading your code should be able
+                            to understand what it does without needing extensive comments or documentation.
+                        </p>
+                        <p>
+                            The chapter describes language keywords (reserved words with special meaning
+                            in C#) and that they are restricted from variable use, but rather than immediately
+                            memorizing a new vocabulary list, learn how you can use the IDE (Visual Studio)
+                            to help identify these while you are coding.
+                        </p>
+                        <p>
+                            We use variables to store and manipulate data. Through the semester we will learn more about
+                            selecting and using data types for short and long term memory storage. For now, make note of
+                            the subtle distinction between declaring (announcing a variable's name and type), assigning
+                            (giving a variable a value), and initializing (assigning an initial value during
+                            declaration).
+                        </p>
+                        <p style="text-align:center; padding:20px; border: 1px solid #ccc;">
+                            initialization = declaration + assignment
+                        </p>
+                    </div> <!-- .card-body -->
+                </div> <!-- .collapse -->
+            </div> <!-- .card identifiers -->
+
+            <div class="card"> <!-- .card math-->
+                <div class="card-header">
+                    <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#math" aria-expanded="true" aria-controls="math">
+                        <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                        Numerical Data
+                    </button>
+                </div> <!-- .card-header -->
+                <div id="math" class="collapse hide">
+                    <div class="card-body">
+                        <h2>Data Types and Rules</h2>
+                        <p>
+                            An important concept of using variables is the understanding that variable types determine
+                            not only memory size and capacities but also rules for interacting with other variables and
+                            processes. Like the expression adding apples and oranges, C# uses a set of primitive
+                            variables, the basic data types built into C# (like integers, floating-point numbers,
+                            booleans, and characters) as a foundation for all other data structures.
+                        </p>
+                        <p>
+                            The chapter also introduces arithmetic operators (<code>+, -, *, /, %</code>) for performing
+                            calculations and explains the behavior of prefix (<code>++x, --x</code>) and postfix (<code>x++,
+                            x--</code>) increment and decrement operators and a reminder of fundamental agebraic order
+                            of operations.
+                        </p>
+                        <p style="font-style: italic;">
+                            Remember PEMDAS: Parentheses, Exponents, Multiplication and Division (left to right),
+                            Addition and Subtraction (left to right)?
+                        </p>
+                        <p>
+                            The next chapter will introduce compound assignment operators to provide a shorthand for
+                            combining an operation and assignment.
+                        </p>
+                    </div> <!-- .card-body -->
+                </div> <!-- .collapse -->
+            </div> <!-- .card math -->
+        </div> <!-- .container -->
+        <div id="footer">
+            <a href="#top" class="btn btn-primary" id="back-to-top">Back to Top</a>
+        </div> <!-- #footer -->
+    </div> <!-- #content-wrapper -->
+    <script src="/course-content/common/js/local.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
