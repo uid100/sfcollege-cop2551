@@ -34,35 +34,90 @@
     "textbook": "materials/textbook.json",
     "content": {
         "modules": {
-            "00-implementation-notes": {
-                "title": "Module 00 - notes only",
+            "01": { 
+                "title": ".NET/C# & Data types, Variables, and Operators",
                 "pages": {
-                    "implementation-note": { "1": "use *resource* for absolute (external) links", "2": "use *source* for course-repo relative (internal) links, courseBase + source" }
-                } },
-            "1": { 
-                "title": ".NET/C# & Data types, Variables, and Operators" },
-            "2": { 
-                "title": "Methods and Scope" },
-            "3": { 
-                "title": "Control Flow - Decision Making" },
-            "4": { 
-                "title": "Control Flow - Loops" },
-            "5": { 
-                "title": "Exception Handling" },
-            "6": { 
-                "title": "Introduction to Object-Oriented Programming (OOP)" },
-            "7": { 
-                "title": "Value types, references, enums & structs" },
-            "8": { 
-                "title": "Working with Arrays and Collections (Introduction)" },
-            "9": { 
-                "title": "Inheritance" },
+                    "start": {"title": "PICK ME! PICK ME! ---- ( ***START HERE*** )","type": "content","source": "content/01/start.html"},
+                    "overview": {"title": "Module Overview","type": "content","source": "content/module1.html"},
+                    "end": {"title": "End Module 1: .NET/C# & Data types, Variables, and Operators","type": "content","source": "content/end-module.html"}
+                }
+            },
+            "02": { 
+                "title": "Methods and Scope",
+                "pages": {
+                    "overview": { "title": "Module Overview", "type": "content", "source": "content/module2.html" },
+                    "end": { "title": "End Module 2: Methods and Scope", "type": "content", "source": "content/end-module.html"}
+                }
+            },
+            "03": { 
+                "title": "Control Flow - Decision Making",
+                "pages": {
+                    "overview": {"title": "Module Overview", "type": "content", "source": "content/module3.html" },
+                    "end": {"title": "End Module 3: Control Flow - Decision Making","type": "content","source":  "content/end-module.html"}
+                }
+            },            
+            "04": { 
+                "title": "Control Flow - Loops",
+                "pages": {
+                    "overview": { "title": "Module Overview", "type": "content", "source": "content/module4.html" },
+                    "end": { "title": "End Module 4: Control Flow - Loops", "type": "content", "source": "content/end-module.html"}
+                }
+            },
+            "05": { 
+                "title": "Exception Handling",
+                "pages": {
+                    "overview": { "title": "Module Overview", "type": "content", "source": "content/module5.html" },
+                    "end": { "title": "End Module 5: Exception Handling", "type": "content", "source": "content/end-module.html"}
+                }
+            },
+            "06": { 
+                "title": "Introduction to Object-Oriented Programming (OOP)",
+                "pages": {
+                    "overview": { "title": "Module Overview", "type": "content", "source": "content/module6.html" },
+                    "end": { "title": "End Module 6: Object-Oriented Programming (OOP)", "type": "content", "source": "content/end-module.html"}
+                }
+            },
+            "07": { 
+                "title": "Value types, references, enums & structs",
+                "pages": {
+                    "overview": { "title": "Module Overview", "type": "content", "source": "content/module7.html" },
+                    "end": { "title": "End Module 7: Value and Reference types", "type": "content", "source": "content/end-module.html"}
+                }
+            },
+            "08": { 
+                "title": "Working with Arrays and Collections (Introduction)",
+                "pages": {
+                    "overview": { "title": "Module Overview", "type": "content", "source": "content/module8.html" },
+                    "end": { "title": "End Module 8: Arrays and Collections", "type": "content", "source": "content/end-module.html"}
+                }
+            },
+            "09": { 
+                "title": "Inheritance",
+                "pages": {
+                    "overview": { "title": "Module Overview", "type": "content", "source": "content/module9.html" },
+                    "end": { "title": "End Module 9: Inheritance", "type": "content", "source": "content/end-module.html"}
+                }
+            },
             "10": { 
-                "title": "Polymorphism and Interfaces" },
+                "title": "Polymorphism and Interfaces",
+                "pages": {
+                    "overview": { "title": "Module Overview", "type": "content", "source": "content/module10.html" },
+                    "end": { "title": "End Module 10: Polymorphism", "type": "content", "source": "content/end-module.html"}
+                }
+            },
             "11": { 
-                "title": "Properties and fields, Encapsulation and Access Modifiers" },
+                "title": "Properties and fields, Encapsulation and Access Modifiers",
+                "pages": {
+                    "overview": { "title": "Module Overview", "type": "content", "source": "content/module11.html" },
+                    "end": { "title": "End Module 11: Encapsulation", "type": "content", "source": "content/end-module.html"}
+                }
+            },
             "12": { 
-                "title": "Wrap-up and Final Exam" 
+                "title": "Wrap-up and Final Exam",
+                "pages": {
+                    "overview": { "title": "Module Overview", "type": "content", "source": "content/module12.html" },
+                    "end": { "title": "End Module 12: Wrap-up", "type": "content", "source": "content/end-module.html"}
+                }
             },
             "99": {
                 "title": "Module 99 - Additional Resources",
