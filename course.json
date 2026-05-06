@@ -39,6 +39,7 @@
                 "pages": {
                     "start": {"title": "PICK ME! PICK ME! ---- ( ***START HERE*** )","type": "content","source": "content/01/start.html"},
                     "overview": {"title": "Module Overview","type": "content","source": "content/01/module1.html"},
+                    "ack": {"title": "Syllabus Acknowledgement","type": "discussion","source": "content/01/ack.html"},
                     "ch1": {"title": "Chapter 1. Welcome to C#", "type": "content", "source": "content/01/ch1.html"},
                     "ch2": {"title": "Chapter 2. Variables, Operators and Expressions", "type": "content", "source": "content/01/ch2.html"},
                     "lab1": {"title": "Chapter 1. Welcome to C#", "type": "content", "source": "content/01/lab01.html"},
