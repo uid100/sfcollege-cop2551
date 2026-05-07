@@ -50,6 +50,8 @@
                 "title": "Methods and Scope",
                 "pages": {
                     "overview": { "title": "Module Overview", "type": "content", "source": "content/module2.html" },
+                    "intro": { "title": "Class Introductions", "type": "discussion", "source": "content/02/introductions.html" },
+                    "ch3": {"title": "Chapter 3. Writing Methods and Applying Scope", "type": "content", "source": "content/02/ch3.html"},
                     "end": { "title": "End Module 2: Methods and Scope", "type": "content", "source": "content/end-module.html"}
                 }
             },

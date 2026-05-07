@@ -1,0 +1,322 @@
+<div id="top"> </div>
+<div class="container my-4 px-2">
+    <div class="card"> <!-- .card overview -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#overview" aria-expanded="true"
+                aria-controls="overview">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Chapter 3: Writing methods and applying scope
+            </button>
+        </div> <!-- .card-header -->
+        <div id="overview" class="collapse show">
+            <div class="card-body">
+                <h3>Introduction</h3>
+                <p>
+                    Chapter 3 introduces you to the essential building blocks of method usage in C#. You’ll
+                    learn how to define, call, and debug methods, manage data with parameters, and use features
+                    like optional parameters and named arguments.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (overview) -->
+
+    <div class="card"> <!-- .card methods-->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#methods" aria-expanded="true"
+                aria-controls="methods">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Methods
+            </button>
+        </div> <!-- .card-header -->
+        <div id="methods" class="collapse hide">
+            <div class="card-body">
+                <h2>Writing and calling methods</h2>
+                <p>
+                    A <strong>method</strong> is a named block of code that performs a specific task. In C#, all
+                    functions are defined as methods, usually inside a class or struct.
+                    While the terms "function" and "method" are sometimes used interchangeably, a method
+                    specifically refers to a function that is associated with an object or class.
+                </p>
+                <p>
+                    For example:
+                </p>
+                <pre style="padding: 20px;"><code class="language-csharp">
+class Greeter
+{
+// This is a method
+public void SayHello()
+{
+Console.WriteLine("Hello!");
+}
+}
+                    </code></pre>
+                <p>
+                    Here, <code>SayHello</code> is a method defined inside the <code>Greeter</code> class. If
+                    this were a standalone function outside a class (which C# doesn't allow), it would just be a
+                    function.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card methods -->
+
+    <div class="card"> <!-- .card parms-->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#parms" aria-expanded="true" aria-controls="parms">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Parameters and Arguments
+            </button>
+        </div> <!-- .card-header -->
+        <div id="parms" class="collapse hide">
+            <div class="card-body">
+                <h2>Understanding Parameters vs. Arguments</h2>
+                <p>
+                    In C#, <strong>parameters</strong> are variables defined in the method declaration. They act
+                    as placeholders for values the method can receive when it is called.
+                    <br>
+                    <strong>Arguments</strong> are the actual values passed to the method when you call it.
+                </p>
+                <pre style="padding: 20px;"><code class="language-csharp">
+// Method with parameters
+void Greet(string name, int age)
+{
+Console.WriteLine($"Hello, {name}. You are {age} years old.");
+}
+
+// Calling the method with arguments
+Greet("Alice", 30);
+                        </code></pre>
+                <p>
+                    In the above example, <code>name</code> and <code>age</code> are parameters. The values
+                    <code>"Alice"</code> and <code>30</code> are arguments.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card parms -->
+
+    <div class="card"> <!-- .card modular-->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#modular" aria-expanded="true"
+                aria-controls="modular">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Writing Modular Code
+            </button>
+        </div> <!-- .card-header -->
+        <div id="modular" class="collapse hide">
+            <div class="card-body">
+                <h2>Why Modular Code Matters</h2>
+                <p>
+                    Modular code is code that is divided into reusable parts—like methods. Writing modular code
+                    makes programs:
+                </p>
+                <ul>
+                    <li><strong>Easier to read</strong>: You can understand a program by reading short method
+                        names instead of long code blocks.</li>
+                    <li><strong>Reusable</strong>: Once written, a method can be called from multiple places
+                        without duplicating code.</li>
+                    <li><strong>Testable and maintainable</strong>: Smaller pieces of code are easier to debug,
+                        test, and update.</li>
+                </ul>
+                <p>
+                    Think of methods as building blocks. You can assemble them to build more complex features
+                    while keeping your code clean and organized.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card modular -->
+
+    <div class="card"> <!-- .card scope-->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#scope" aria-expanded="true" aria-controls="scope">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Variable Scope
+            </button>
+        </div> <!-- .card-header -->
+        <div id="scope" class="collapse hide">
+            <div class="card-body">
+                <h2>What Is Variable Scope?</h2>
+                <p>
+                    <strong>Scope</strong> refers to where a variable can be accessed in your code. In C#,
+                    variables can have different scopes depending on where they are declared:
+                </p>
+                <ul>
+                    <li><strong>Local scope</strong>: A variable declared inside a method can only be used
+                        within that method.</li>
+                    <li><strong>Class scope (field)</strong>: A variable declared in a class but outside any
+                        method is accessible to all methods in that class.</li>
+                </ul>
+                <pre style="padding:20px;"><code class="language-csharp">
+class Example
+{
+int classLevelVar = 10; // Class scope
+
+void ShowScope()
+{
+int localVar = 5; // Local scope
+Console.WriteLine(localVar);       // OK
+Console.WriteLine(classLevelVar);  // OK
+}
+
+void AnotherMethod()
+{
+// Console.WriteLine(localVar);    // ERROR: localVar not in scope here
+}
+}
+                    </code></pre>
+                <p>
+                    Understanding scope helps avoid bugs and makes your code easier to manage.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card scope -->
+
+    <div class="card"> <!-- .card signatures-->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#signatures" aria-expanded="true"
+                aria-controls="signatures">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Method Signatures
+            </button>
+        </div> <!-- .card-header -->
+        <div id="signatures" class="collapse hide">
+            <div class="card-body">
+                <h2>What Is a Method Signature?</h2>
+                <p>
+                    A <strong>method signature</strong> in C# is the combination of a method's
+                    <strong>name</strong> and its <strong>parameter list</strong> (types, number, and order of
+                    parameters). The return type is <em>not</em> part of the signature.
+                </p>
+                <p>Example of a method signature:</p>
+                <pre><code class="language-csharp">
+                void PrintMessage(string message)
+                    ↑       ↑
+                Return  Name and Parameters = Method Signature
+                    </code></pre>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card signatures -->
+
+    <div class="card"> <!-- .card overload-->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#overload" aria-expanded="true" aria-controls="overload">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Method Overloading
+            </button>
+        </div> <!-- .card-header -->
+        <div id="overload" class="collapse hide">
+            <div class="card-body">
+                <h2>What Is Method Overloading?</h2>
+                <p>
+                    <strong>Method overloading</strong> means creating multiple methods with the same name but
+                    different parameter lists (different number, type, or order of parameters). It allows the
+                    same method name to handle different types of input.
+                </p>
+
+                <p>Example of method overloading:</p>
+                <pre style="padding:20px;"><code class="language-csharp">
+class Printer
+{
+// Method 1: No parameters
+public void Print()
+{
+Console.WriteLine("Printing default message.");
+}
+
+// Method 2: One string parameter
+public void Print(string message)
+{
+Console.WriteLine(message);
+}
+
+// Method 3: One string and one int parameter
+public void Print(string message, int copies)
+{
+for (int i = 0; i < copies; i++)
+{
+    Console.WriteLine(message);
+}
+}
+}
+                    </code></pre>
+                <p>
+                    All three methods are named <code>Print</code>, but they have different method signatures.
+                    The C# compiler uses the arguments you provide to determine which version to call.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card overload -->
+
+    <div class="card"> <!-- .card opt-->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#opt" aria-expanded="true" aria-controls="opt">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Optional and named parameters
+            </button>
+        </div> <!-- .card-header -->
+        <div id="opt" class="collapse hide">
+            <div class="card-body">
+                <h2>Using Optional and Named Parameters in C#</h2>
+                <p>
+                    In C#, <strong>optional parameters</strong> allow you to omit arguments when calling a
+                    method. These parameters have default values defined in the method signature.
+                </p>
+                <pre style="padding:20px;"><code>
+void Greet(string name = "Guest")
+{
+Console.WriteLine("Hello, " + name);
+}
+
+Greet();         // Output: Hello, Guest
+Greet("Alice");  // Output: Hello, Alice
+                </code></pre>
+                <p style="padding:20px; margin: 10px; border: 1px solid #ccc;">
+                    <strong>Important:</strong> Optional parameters must be defined after all required
+                    parameters in the method signature.
+                </p>
+
+
+                <h2>Named Parameters</h2>
+                <p>
+                    <strong>Named parameters</strong> let you specify the name of the parameter when passing
+                    arguments, which improves readability and allows you to pass arguments in any order.
+                </p>
+                <pre style-="padding:20px;"><code>
+void DisplayInfo(string name, int age)
+{
+Console.WriteLine(name + " is " + age + " years old.");
+}
+
+DisplayInfo(age: 30, name: "Bob");  // Output: Bob is 30 years old.
+                </code></pre>
+
+                <p>
+                    You can also combine <strong>named</strong> and <strong>optional</strong> parameters for
+                    more flexibility.
+                </p>
+
+                <p style="padding:20px; margin: 10px; border: 1px solid #ccc;">
+                    <strong>Note:</strong> Be cautious with optional parameters, as they can lead to
+                    ambiguity if overloaded methods have similar signatures. The C# compiler may not always
+                    be able to determine which method to call.
+                </p>
+
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card opt -->
+
+</div> <!-- .container -->
