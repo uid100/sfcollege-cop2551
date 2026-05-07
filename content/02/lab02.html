@@ -1,0 +1,556 @@
+<div id="top"> </div>
+<div class="container" id="lab-assignment-wrapper">
+    <h1>Lab 02: Define and use custom methods in C#</h1>
+    <p style="margin:10px;">
+        <strong>Objective:</strong> Practice creating methods with and without parameters, with and without return
+        values, including the use of optional parameters.
+    </p>
+    <div class="container my-4 px-2">
+        <div class="card"> <!-- .card (overview) -->
+            <div class="card-header">
+                <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#overview" aria-expanded="true"
+                    aria-controls="overview">
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                    <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                    Overview (click each header to hide/show details)
+                </button>
+            </div> <!-- .card-header -->
+            <div id="overview" class="collapse show">
+                <div class="card-body">
+                    <p>
+                        This assignment will guide you through writing a structured 
+                        C# program which will define and call custom methods.
+                    </p>
+                    <p>
+                        You will build on a basic program by adding methods of
+                        increasing complexity.
+                    </p>
+                </div> <!-- .card-body -->
+            </div> <!-- .collapse -->
+        </div> <!-- .card (overview) -->
+
+        <div class="card"> <!-- .card (ex1) -->
+            <div class="card-header">
+                <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#ex1" aria-expanded="true" aria-controls="ex1">
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                    <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                    Exercise #1: Box Dimensions (Guided Exercise)
+                </button>
+            </div> <!-- .card-header -->
+            <div id="ex1" class="collapse hide">
+                <div class="card-body">
+                    <h2>Exercise #1: Box Dimensions </h2>
+                    <ol id="ex1-steps">
+                        <li> <!-- create the project -->
+                            <details>
+                                <summary>Create the project</summary>
+                                <p>
+                                    Create a new C# console application project.
+                                </p>
+                                <p>
+                                    You may decide to use Visual Studio, Visual Studio Code (VS Code),
+                                    or from the command line using the following quick start process.
+                                </p>
+                                <div>
+                                    <h4>quick start:</h4>
+                                    <p>
+                                        Open a terminal window and navigate to the folder where you want to
+                                        create the project.
+                                    </p>
+                                    <p>
+                                    <code>cd labs</code>
+                                    </p>
+                                    <p>
+                                        Create a new solution folder for the lab and navigate into it.
+                                    </p>
+                                    <p>
+                                        <code>dotnet new sln Lab01</code>
+                                        <code>cd Lab01</code>
+                                        <code>dotnet new console -n boxDimensions</code><br>
+                                        <code>dotnet sln add boxDimensions/boxDimensions.csproj</code>
+                                    </p>
+                                    <p>
+                                        This will create the solution folder structure:
+                                    </p>
+                                    <p>
+                                        <code>Lab01</code><br>
+                                        <code>├── Lab01.sln</code><br>
+                                        <code>└── boxDimensions</code><br>
+                                        <code>&nbsp;&nbsp;&nbsp;&nbsp;├── boxDimensions.csproj</code><br>
+                                        <code>&nbsp;&nbsp;&nbsp;&nbsp;└── Program.cs</code><br>
+                                    </p>
+                                    <p>
+                                        You can open the solution from Visual Studio, or from VS Code 
+                                        open the Command Palette (⇧⌘P) and select .NET:Open Solution
+                                    </p>
+                                </div>
+                                <p>
+                                    <ul>
+                                        <li>project name: boxDimensions</li>
+                                        <li>solution name: Lab02</li>
+                                    </ul>
+                                </p>
+                                <p>
+                                    You will create a new solution folder for each of the assignments, which will
+                                    contain the different projects for each lab. Refer to the steps in the previous
+                                    lab for more detailed steps. It is important that you become comfortable with
+                                    easily creating, building, and running new projects and solutions.
+                                </p>
+                                <h3>Edit the source code</h3>
+                                <p>
+                                    Replace the source code with the following and update the header
+                                    with your information.:
+                                </p>
+                                <pre style="margin: 20px;"><code>
+/*
+* Author:        First Last Name
+* Date:          YYYY-MM-DD
+* Class:         Santa Fe College, COP2551 OOP-1 with C#
+* Assignment:    Lab 02 - Exercise #1 - Box Dimensions
+* Description:   C# console application that handles 3D object dimensions and 
+*                calculates the volume.
+*/
+
+using System;
+
+class Program
+{
+static double GetDimension(string name)
+{
+    Console.Write($"Enter {name}: ");
+    double value;
+    while (!double.TryParse(Console.ReadLine(), out value) || value < 0)
+    {
+        Console.Write($"Invalid input. Please enter a positive number for {name}: ");
+    }
+    return value;
+}
+
+static double CalculateVolume(double height, double width, double depth)
+{
+    return height * width * depth;
+}
+
+static void DisplayResults(double height, double width, double depth, double volume)
+{
+    Console.WriteLine($"\nHeight: {height}");
+    Console.WriteLine($"Width : {width}");
+    Console.WriteLine($"Depth : {depth}");
+    Console.WriteLine($"Volume: {volume}");
+}
+
+static void Main()
+{
+    double height = GetDimension("height");
+    double width = GetDimension("width");
+    double depth = GetDimension("depth");
+
+    double volume = CalculateVolume(height, width, depth);
+
+    DisplayResults(height, width, depth, volume);
+}
+}
+</code></pre>
+                            </details>
+                        </li> <!-- create the project -->
+                        <li> <!-- explain -->
+                            <details>
+                                <summary>Explanation</summary>
+                                <h2>Understanding the code</h2>
+                                <p>
+                                    Most of the code and syntax should be familiar to you. The program uses the
+                                    <code>double</code> data type to store the dimensions and volume of the box.
+                                </p>
+                                <h3>Main()</h3>
+                                <p>
+                                    <code>Main()</code> is the entry point of the program.
+                                </p>
+                                <p>
+                                    It calls the <code>GetDimension()</code> method three times to get the height,
+                                    width, and
+                                    depth of the box from the user.
+                                </p>
+                                <p>
+                                    <code>CalculateVolume</code> calculates the
+                                    volume of the box using the formula
+                                    <code>volume = height * width * depth</code>.
+                                </p>
+                                <p>
+                                    Finally, the <code>DisplayResults()</code> method is called to display the
+                                    results to the console.
+                                </p>
+                                <h3>Method signatures</h3>
+                                <p>
+                                    Notice the signature for each method.
+                                <ul>
+                                    <li><code>Main()</code></li>
+                                    <li><code>GetDimension(string)</code></li>
+                                    <li><code>CalculateVolume(double, double, double)</code></li>
+                                    <li><code>DisplayResults(double, double, double, double)</code></li>
+                                </ul>
+                                </p>
+                                <p>
+                                    There should be one, and only one <code>Main()</code> method in your program.
+                                    This is the entry point of the program. The program will not run without it.
+                                </p>
+                                <p>
+                                    For each call to a methods, the compiler will look for a method with the same
+                                    name and the same number and type of parameters. If it finds one, it will call
+                                    that method.
+                                </p>
+                                <h3>Return values and types</h3>
+                                <p>
+                                    From the method definitions, you can see that the <code>GetDimension()</code>
+                                    method
+                                    and the <code>CalculateVolume()</code> method return a <code>double</code>
+                                    value. And
+                                    in the code, there is a corresponding <code>return</code> statement in each of
+                                    those methods.
+                                </p>
+                                <p>
+                                    <code>DisplayResults()</code> and <code>Main()</code> are both declared with a
+                                    <code>void</code> return type. This means that they do not return a value. The
+                                    <em>Display</em> method is used to output to the console nothing is expected to
+                                    be
+                                    returned.
+                                </p>
+                                <p>
+                                    Since <code>Main()</code> is the entry point of the program, it does not return
+                                    a value to anything. This makes sense since there is no calling method to return
+                                    to.
+                                </p>
+                                <h3>GetDimension()</h3>
+                                <p>
+                                    While most of the code and syntax should be familiar to you, one line may look a
+                                    little different and is worth explaining.
+                                </p>
+                                <p>
+                                    <code>while (!double.TryParse(Console.ReadLine(), out value) || value &lt; 0)</code>
+                                </p>
+                                <p>
+                                    This line is a little more complex than the others. This line is part of a loop
+                                    that
+                                    keeps asking the user for input until they enter a valid positive number.
+                                </p>
+                                <h4>step-by-step:</h4>
+                                <ol>
+                                    <li><code>Console.ReadLine()</code><br>
+                                        → Reads what the user types in the console as a string.
+                                    </li>
+                                    <li><code>double.TryParse(..., out value)</code><br>
+                                        → Tries to convert that string into a double number.<br>
+                                        → If it works, the result is stored in value.<br>
+                                        → It returns true if the conversion is successful, or false if it fails
+                                        (like if the user types letters).
+                                    </li>
+                                    <li><code>while (!double.TryParse(...))</code><br>
+                                        → The ! means "not".<br>
+                                        → So loop will continue to be true when the input is not a number.
+                                    </li>
+                                    <li><code>value < 0</code><br>
+                                        → This checks if the number is negative.
+                                    </li>
+                                    <li><code>||</code><br>
+                                        → The || operator means "or".<br>
+                                        → So the condition is true if either the input is not a number or it’s a
+                                        negative number.
+                                    </li>
+                                </ol>
+                                <h4>So the full meaning is:</h4>
+                                <p>
+                                    "Keep asking the user until they type a number that is not negative."
+                                </p>
+                            </details>
+                        </li> <!-- edit the source code -->
+                        <li> <!-- run and test the program -->
+                            <details>
+                                <summary>Run and test the program</summary>
+                                <p>
+                                    Run the program by clicking the green arrow (Start button) in the toolbar or by
+                                    pressing <code>Ctrl + F5</code>. Or you can use either of the Start options in
+                                    the Debug menu.
+                                </p>
+                                <p>
+                                    Confirm that the program runs and prompts you for the height, width, and depth
+                                    of the box, the result is calculated and that the prompts and result are
+                                    displayed properly in the console window.
+                                </p>
+                                <p>
+                                    Test the program with a variety of inputs. Enter some positive numbers, negative
+                                    numbers, and zero. Enter some letters or words. Does the program handle these
+                                    inputs correctly? Does it display the expected results?
+                                </p>
+                            </details>
+                        </li> <!-- run and test the program -->
+                    </ol> <!-- #ex1-steps -->
+                    <p style="font-style: italic; margin: 20px;">
+                        Continue to the next exercise.
+                    </p>
+                </div> <!-- .card-body -->
+            </div> <!-- .collapse -->
+        </div> <!-- .card (ex1) -->
+
+        <div class="card"> <!-- .card (ex2) -->
+            <div class="card-header">
+                <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#ex2" aria-expanded="true" aria-controls="ex2">
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                    <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                    Exercise #2: writing methods with parameters
+                </button>
+            </div> <!-- .card-header -->
+            <div id="ex2" class="collapse hide">
+                <div class="card-body">
+                    <h2>Exercise #2: Using parameters</h2>
+                    <ol>
+                        <li> <!-- create the project -->
+                            <details>
+                                <summary>Create the project</summary>
+                                <p>
+                                    Add another console application project.
+                                </p>
+                                <h3>Using VS Code</h3>
+                                <p>
+                                    You can use the solution explorer from Visual Studio, or from VS 
+                                    Code. In VS Code, the <code>SOLUTION EXPLORER</code> will appear at 
+                                    the bottom of the <code>EXPLORER</code> pane when you open the solution.
+                                </p>
+                                <p>
+                                    From VS Code, right-click on the solution and select <code>Add</code>
+                                    <code>New Project</code>. Select the <code>Console App</code> template and
+                                    name the project <code>methodParameters</code>. Choose the Default diretory
+                                    for the project location, then show all template options for the project 
+                                    and set do not use top-level statements True, and Create Project.
+                                </p>
+                                <p>
+                                    In a later module we'll discuss the use of top-level statements, but for now,
+                                    we will use the traditional method of defining a class and a Main() method.
+                                </p>
+                                <p>
+                                    <ul>
+                                        <li>project name: <code>methodParameters</code></li>
+                                        <li>solution name: <code>Lab02</code></li>
+                                    </ul>
+                                </p>
+                                <h3>Alternatively,</h3>
+                                <p>
+                                    You can use the command line to create the project. Open a terminal window and
+                                    navigate back to the solution folder.
+                                </p>
+                                <p>
+                                    <code>cd ..</code>
+                                    <code>dotnet new console -n methodParameters</code><br>
+                                    <code>dotnet sln add methodParameters/methodParameters.csproj</code>
+                                </p>
+                                <p>
+                                    The new project will appear in the solution explorer.
+                                </p>
+                            </details>
+                        </li> <!-- create the project -->
+                        <li> <!-- edit the source code -->
+                            <details>
+                                <summary>Write the source code (4 methods)</summary>
+                                <h3>Use parameters and return values from methods</h3>
+                                <p>
+                                    Inside the Program class, write a new method called <code>AreaOfCircle()</code>.
+                                    This method should take a double parameter for the radius and an optional
+                                    and return a double value for the area of the circle. The formula for the area of a circle is
+                                    <code>area = Math.PI * radius * radius</code>.
+                                </p>
+                                <p>
+                                    Next, write a method called <code>CircumferenceOfCircle()</code>. This method
+                                    should take a double parameter for the radius and an optional parameter for
+                                        the number of decimal places to round to. The method should return a double
+                                    value for the circumference of the circle. The formula for the circumference of
+                                    a circle is <code>circumference = 2 * Math.PI * radius</code>.
+                                </p>
+                                <h3>Expression-bodied methods</h3>
+                                <p>
+                                    Next, write an Expression-bodied method called <code>IsEven()</code>. This 
+                                    method should take an <code>int</code> parameter and return a <code>bool</code>
+                                    value indicating whether the number is even or not. Check the input parameter 
+                                    by dividing by 2 and checking the remainder. Return true or false.
+                                </p>
+                                <p>
+                                    Remember that an expression-bodied method is a shorthand way of writing a method
+                                    and does not require a <code>return</code> statement. 
+                                </p>
+                                <p>
+                                    Write another method called <code>IsOdd()</code> that
+                                    does the same thing but checks if the number is odd.
+                                </p>
+                                <h3>Optional parameters</h3>
+                                <p>
+                                    Finally, write a method called <code>DisplayResults()</code>. This method should
+                                    take a string parameter for the name of the calculation, a double parameter for
+                                    the result, and an optional int parameter for the number of decimal places to
+                                    round to. The method should display the results in a formatted string.
+                                    Use the <code>Math.Round()</code> method to round the result to the specified
+                                    number of decimal places. If the optional parameter is not provided, use 2
+                                    decimal places by default.
+                                </p>
+                                <p>
+                                    The method should display the results in a formatted string. For example:
+                                    <code>Area of circle with radius 5 is 78.54</code>.
+                                </p>
+                            </details>
+                        </li> <!-- edit the source code -->
+                        <li> <!-- run and test the program -->
+                            <details>
+                                <summary>Run and test the program</summary>
+                                <p>
+                                    Edit the <code>Main()</code> method to call each of the methods you just created.
+                                    Write lines (test cases) to test each of the methods and display the results.
+                                </p>
+                                <p>
+                                    Run the program and test each of the methods. Make sure to test the optional
+                                    parameters by calling the methods with and without the optional parameters.
+                                </p>
+                            </details>
+                        </li> <!-- run and test the program -->
+                    </ol>
+                </div> <!-- .card-body -->
+            </div> <!-- .collapse -->
+        </div> <!-- .card (ex2) -->
+
+        <div class="card"> <!-- .card (ex3) -->
+            <div class="card-header">
+                <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#ex3" aria-expanded="true" aria-controls="ex3">
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                    <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                    Exercise #3: Overloading methods
+                </button>
+            </div> <!-- .card-header -->
+            <div id="ex3" class="collapse hide">
+                <div class="card-body">
+                    <h2>Exercise #3: Overloading methods</h2>
+                    <ol>
+                        <li>
+                            <details>
+                                <summary>Create the project</summary>
+                                <p>
+                                    As before, add another console application project to the solution.
+                                </p>
+                                <p>
+                                    <ul>
+                                        <li>project name: <code>overloadingMethods</code></li>
+                                        <li>solution name: <code>Lab02</code></li>
+                                    </ul>
+                                </p>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Edit the source code</summary>
+                                <p>
+                                    Write overloaded methods to test the square of a number, using either
+                                    an int or a double.
+                                </p>
+                                <p>
+                                    Inside the Program class, write a new method called <code>Square()</code>.
+                                    This method should take an int parameter and return an int value for the
+                                    square of the number. The formula for the square of a number is
+                                    <code>square = number * number</code>.
+                                </p>
+                                <p>
+                                    Next, write another method called <code>Square()</code>. This method should
+                                    take a double parameter and return a double value for the square of the number.
+                                    The formula for the square of a number is <code>square = number * number</code>.
+                                </p>
+                                <p>
+                                    The two methods should have the same name but different parameter types. This
+                                    is called method overloading. The compiler will determine which method to
+                                    call based on the type of the argument passed to the method.
+                                </p>
+                                <p>
+                                    Edit the <code>Main()</code> method to call each of the methods you just
+                                    created. Write lines (test cases) to test each of the methods and display the
+                                    results.
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Run and test the program</summary>
+                                <p>
+                                    Run the program and test each of the methods. Test positive and negative
+                                    numbers, and zero, to confirm that the methods work correctly.
+                                </p>
+                            </details>
+                        </li>
+                    </ol>
+                </div> <!-- .card-body -->
+            </div> <!-- .collapse -->
+        </div> <!-- .card (ex3) -->
+
+        <div class="card">
+            <div class="card-header">
+                <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#submit" aria-expanded="true" aria-controls="submit">
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                    <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                    Review and Submit
+                </button>
+            </div> <!-- .card-header -->
+            <div id="submit" class="collapse hide">
+                <div class="card-body">
+                    <h2>Review and Submit</h2>
+                    <ol>
+                        <li>
+                            <details>
+                                <summary>Let's review</summary>
+                                <p>
+                                    You should be comfortable creating and adding projects in 
+                                    a Visual Studio solution container. Also:
+                                    <ul>
+                                        <li>Writing methods with different parameter types</li>
+                                        <li>Using return values</li>
+                                        <li>Using optional parameters</li>
+                                        <li>Overloading methods</li>
+                                    </ul>
+                                </p>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Zip the solution folder</summary>
+                                <p>
+                                    Zip the solution folder <code>Lab02</code> and all of its contents. 
+                                    This should include the <code>.sln</code> file and all of the project folders.
+                                    Make sure to include all (3) of the projects you created for this lab.
+                                </p>
+                                <p>
+                                    The solution folder should look like this:
+                                </p>
+                                <p>
+                                    <code>Lab02</code><br>
+                                    <code>├── Lab02.sln</code><br>
+                                    <code>├── boxDimensions</code><br>
+                                    <code>&nbsp;&nbsp;&nbsp;&nbsp;├── boxDimensions.csproj</code><br>
+                                    <code>&nbsp;&nbsp;&nbsp;&nbsp;└── Program.cs</code><br>
+                                    <code>├── methodParameters</code><br>
+                                    <code>&nbsp;&nbsp;&nbsp;&nbsp;├── methodParameters.csproj</code><br>
+                                    <code>&nbsp;&nbsp;&nbsp;&nbsp;└── Program.cs</code><br>
+                                    <code>└── overloadingMethods</code><br>
+                                    <code>&nbsp;&nbsp;&nbsp;&nbsp;├── overloadingMethods.csproj</code><br>
+                                    <code>&nbsp;&nbsp;&nbsp;&nbsp;└── Program.cs</code><br>
+                                </p>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Submit your work</summary>
+                                <p>
+                                    Submit the zipped solution folder to the assignment submission link in
+                                    Canvas.
+                                </p>
+                            </details>
+                        </li>
+                    </ol>
+                </div> <!-- .card-body -->
+            </div> <!-- .collapse -->
+        </div> <!-- .card (submit) -->
+
+    </div> <!-- .container -->
+</div> <!-- #lab-assignment-wrapper -->
