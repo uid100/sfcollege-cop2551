@@ -1,0 +1,209 @@
+<div id="top"> </div>
+
+<div class="container my-4 px-2">
+    <div class="card mb-3"> <!-- .card overview -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#overview" aria-expanded="true"
+                aria-controls="overview">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Chapter 10: Using arrays
+            </button>
+        </div> <!-- .card-header -->
+        <div id="overview" class="collapse show">
+            <div class="card-body">
+                <h3>Introduction</h3>
+                <p>
+                    Chapter 10 introduces arrays, a fundamental data structure that allows you to store 
+                    and manipulate collections of data.
+                </p>                         
+                </p>
+                    Arrays are used to store multiple values of the same type in a single variable,
+                    making it easier to manage and manipulate large sets of data. They are particularly
+                    useful when you need to perform operations on a collection of items, such as sorting,
+                    searching, or iterating through a list of values.
+                </p>
+                <p>
+                    Specifically, the chapter highlights:
+                    <ul>
+                        <li>Declaring arrays</li>
+                        <li>Creating an array instance</li>
+                        <li>Storing and accessing data within arrays</li>
+                        <li>Copying arrays, and</li>
+                        <li>Multi-dimensional arrays</li>
+                    </ul>
+                </p>
+                <p>
+                    This is an important chapter, as arrays are a basic concept used widely in programming. 
+                    Take the time to read the chapter and review the other resources provided in Canvas.
+                </p>
+                <p>
+                    Having a strong understanding of arrays will help you write more efficient and organized 
+                    code, especially when dealing with large datasets or complex data structures.
+                </p>
+                <p style="font-style: italic;">
+                    Below are -briefly- the points that I think are the important takeaways from the chapter:
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (overview) -->
+    <div class="card mb-3"> <!-- .card declaring -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#declaring" aria-expanded="true"
+                aria-controls="declaring">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Declaring and initializing arrays
+            </button>
+        </div> <!-- .card-header -->
+        <div id="declaring" class="collapse show">
+            <div class="card-body">
+                <h4>Declaring and initializing arrays</h4>
+                <p>
+                    Notice that in C#, arrays can be declared in a few different ways. 
+                    All are valid, and all have their own use cases. The situation will 
+                    determine which is best. Sometimes, you may know the size of the 
+                    dataset but not the values, while other times you may know the
+                    values but not the size.
+                </p>
+                <p>
+                    While reading through the material, consider <em>when</em> and 
+                    <em>why</em> you might use one or another of these.
+                </p>
+                </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (declaring) -->
+    <div class="card mb-3"> <!-- .card accessing -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#accessing" aria-expanded="true"
+                aria-controls="accessing">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Accessing array values
+            </button>
+        </div> <!-- .card-header -->
+        <div id="accessing" class="collapse show">
+            <div class="card-body">
+                <h4>Accessing array values</h4>
+                <p>
+                    An array index or subscript is used to identify a specific element
+                    stored in an array. The index is an integer value that
+                    represents the position of the element within the array. 
+                </p>
+                <p>
+                    Be careful not to confuse the index with the value stored in the array.
+                </p>
+                <p style="border: 1px solid #ccc; padding: 10px; background-color: #f9f9f9; text-align: center; font-size: larger;">
+                    The index is used to access the value, but it is not the value itself.
+                </p>
+                <p>
+                    For example, if you have an array of integers, the index might be 0,
+                    but the value at that index could be 42. The index is simply a way to
+                    reference the position of the value within the array.
+                </p>
+                </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (accessing) -->
+    <div class="card mb-3"> <!-- .card copying -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#copying" aria-expanded="true"
+                aria-controls="copying">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Copying arrays
+            </button>
+        </div> <!-- .card-header -->
+        <div id="copying" class="collapse show">
+            <div class="card-body">
+                <h4>Copying arrays</h4>
+                <p>
+                    Copying arrays is a common operation in programming, and C# provides
+                    several methods to do this.
+                </p>
+                <p>
+                    Common terms used when copying arrays are <em>shallow</em> and
+                    <em>deep</em> copies. A shallow copy creates a new array variable that 
+                    references the same elements as the original array, while a deep copy 
+                    creates a new array that contains copies of the elements in the original 
+                    array.
+                </p>
+                <p>
+                    Read that again.
+                </p>
+                <p>
+                    I was surprised that the book did not mention these, but they are 
+                    in common use so I wanted to make sure you are aware of them.
+                </p>
+                <p>
+                    Remember the difference between reference and value types. An array 
+                    is a reference type, meaning that when you copy an array, you are
+                    copying the reference to the array, not the actual elements. This means
+                    that if you modify the elements of the copied array, you are also modifying
+                    the elements of the original array.
+                </p>
+                <p>
+                    This is an important distinction and you need to be careful especially
+                    when passing arrays to methods or returning them from methods.
+                </p>
+                <p>
+                    If you want to manipulate the elements of an array without affecting
+                    the original array, you can create a deep copy of the array. That is 
+                    to make a new array and copy each of the elements to the new array. 
+                    This way, you can modify the elements of the new array without
+                    affecting the original array.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (copying) -->
+    <div class="card mb-3"> <!-- .card multi-dimensional -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#multi-dimensional" aria-expanded="true"
+                aria-controls="multi-dimensional">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Multi-dimensional arrays
+            </button>
+        </div> <!-- .card-header -->
+        <div id="multi-dimensional" class="collapse show">
+            <div class="card-body">
+                <h3>Multi-dimensional arrays</h3>
+                <p>
+                    Multi-dimensional arrays are arrays that have more than one dimension. 
+                    This can mean two or more. Although most of the examples you see will 
+                    deal with two-dimensional arrays, you can create arrays with any number
+                    of dimensions.
+                </p>
+                <p>
+                    Again, the textbook's introduction is good, but it doesn't go too deep
+                    into the topic. The author does explain the distinction between multi-dimensional 
+                    arrays and jagged arrays.
+                </p>
+                <p>
+                    Jagged arrays (sometimes called "ragged" arrays) are also known as 
+                    arrays of arrays. That is to say, they are arrays that contain
+                    other arrays as their elements, which may contain different
+                    numbers of elements. This allows for more flexibility in storing
+                    data, as each sub-array can have a different length.
+                </p>
+                <p>
+                    In contrast, multi-dimensional arrays are more structured. Every 
+                    row or column or dimension has the same number of elements.
+                    This means that all rows have the same number of columns, and all
+                    columns have the same number of rows.
+                </p>
+                <p>
+                    Once again, which type you use will depend on the situation.
+                    Jagged arrays are useful when you need to store data that has
+                    varying lengths, so that you can save memory and avoid
+                    wasting space. Multi-dimensional arrays are useful when you need
+                    to store data in a structured way, such as in a table or grid format.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (overview) -->
+</div> <!-- .container -->

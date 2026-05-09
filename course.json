@@ -49,7 +49,7 @@
             "02": {
                 "title": "Methods and Scope",
                 "pages": {
-                    "overview": { "title": "Module Overview", "type": "content", "source": "content/module2.html" },
+                    "overview": { "title": "Module Overview", "type": "content", "source": "content/02/module2.html" },
                     "intro": { "title": "Class Introductions", "type": "discussion", "source": "content/02/introductions.html" },
                     "ch3": {"title": "Chapter 3. Writing Methods and Applying Scope", "type": "content", "source": "content/02/ch3.html"},
                     "end": { "title": "End Module 2: Methods and Scope", "type": "content", "source": "content/end-module.html"}
@@ -58,7 +58,7 @@
             "03": {
                 "title": "Control Flow - Decision Making",
                 "pages": {
-                    "overview": {"title": "Module Overview", "type": "content", "source": "content/module3.html" },
+                    "overview": {"title": "Module Overview", "type": "content", "source": "content/03/module3.html" },
                     "end": {"title": "End Module 3: Control Flow - Decision Making","type": "content","source":  "content/end-module.html"}
                 }
             },            

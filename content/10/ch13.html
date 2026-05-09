@@ -1,0 +1,155 @@
+<div id="top"> </div>
+
+<div class="container my-4 px-2">
+    <div class="card"> <!-- .card overview -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#overview" aria-expanded="true"
+                aria-controls="overview">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Chapter 13: Creating interfaces and defining abstract classes
+            </button>
+        </div> <!-- .card-header -->
+        <div id="inheritance" class="collapse show">
+            <div class="card-body">
+                <h2>Introduction</h2>
+                <p>
+                    Chapter 13 starts with:
+                    <blockquote style="padding:30px; font-style: italic;">
+                        "Inheriting from a class is a powerful mechanism, but the real power of inheritance
+                        comes from inheriting from an interface."
+                    </blockquote>
+                </p>
+                <h3>
+                    But, what is an interface?
+                </h3>
+                <p>
+                    Consider the familiar controls:<br>
+                    <img src="/course-content/images/controls.jpeg" alt="Media Controls" 
+                        width="50%" style="margin: 0 auto;" class="img-fluid">
+                </p>
+                <p>
+                    You know what each button does because you have used them before. Even though you may not
+                    know how the buttons are implemented, you can use them because they have a defined interface.
+                    These buttons may control a CD player, a DVD player, or a streaming service, or even some 
+                    technology that has not been invented yet. The interface remains the same, allowing you to 
+                    use the controls without needing to know the details of how they work.
+                </p>
+                <p>
+                    So by extension, you could presumably create an application that uses these controls without
+                    knowing exactly how they are implemented, and be pretty confident that as technology evolves,
+                    the interface will very likely still work the same way. This is the essence of an interface 
+                    in programming.
+                </p>
+                <p>
+                    Think about the controls in an automobile. If you travel to a different city and rent a car, 
+                    when you get in, you will likely know how to operate the controls without needing to read 
+                    the manual. The steering wheel, pedals, and gear shift all have a defined interface that you
+                    are familiar with. You know that turning the steering wheel will change the direction of the car,
+                    pressing the accelerator will increase speed, and pressing the brake will slow down or stop the car.
+                </p>
+                <p>
+                    This is not because it's the only way to design a car, but because the interface is standardized
+                    and familiar. Not that there aren't subtle differences between <em>instances</em> and 
+                    <em>implementations</em>, but the interface remains consistent.
+                </p>
+                <p>
+                    In programming, an interface serves a similar purpose. It defines a contract that classes
+                    can implement, specifying what methods and properties they must provide without dictating how
+                    they should be implemented. This allows for flexibility and reusability in code design.
+                </p>
+                <p>
+                    You can write an application that will implement a defined interface without knowing the details of how
+                    the interface is implemented. This is the essence of polymorphism, where different classes can
+                    be treated as instances of the same interface, allowing for more flexible and maintainable code.
+                </p>
+                <p>
+                    You can create new classes that implement the same interface, and they will be interchangeable
+                    with existing classes that implement the same interface. This promotes code reuse and makes it 
+                    easier to extend and modify your application without breaking existing functionality.
+                </p>
+                <p>
+                    The implications of this are profound. You can create a class that implements an interface
+                    without needing to know how the interface is implemented. This allows you to write code that can
+                    work with any class that implements the interface, regardless of its specific implementation. This
+                    means you can write code that is agnostic to the specific classes being used, as long as they 
+                    adhere to the defined interface.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (protected) -->
+
+    <div class="card"> <!-- .card dependency_injection -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#dependency_injection" aria-expanded="true"
+                aria-controls="dependency_injection">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Dependency Injection
+            </button>
+        </div> <!-- .card-header -->
+        <div id="dependency_injection" class="collapse show">
+            <div class="card-body">
+                <h2>Dependency Injection</h2>
+                <p>
+                    Dependency Injection (DI) is a design pattern that allows for the removal of hard-coded dependencies
+                    and makes it possible to change them at runtime or during testing. This is achieved by injecting
+                    dependencies into a class, rather than having the class create its own dependencies.
+                </p>
+                <p>
+                    By using interfaces, you can define a contract for the dependencies that your class needs,
+                    allowing you to inject different implementations of those dependencies at runtime. This promotes
+                    loose coupling between classes and makes your code more flexible and testable.
+                </p>
+                <p>
+                    Another way of saying this is that you can write code that that uses an interface, and then
+                    select one of several classes that implements that interface. This allows you to change the
+                    behavior of your code at runtime.
+                </p>
+                <p>
+                    Imagine if your code is dependent on a class that is not available for testing, maybe another team
+                    is working on it, or it is a third-party library. By using an interface, you can create a mock
+                    implementation of that interface for testing purposes, allowing you to test your code without needing
+                    the actual implementation of the class.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (dependency_injection) -->
+
+    <div class="card"> <!-- .card abstract_classes -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#abstract_classes" aria-expanded="true"
+                aria-controls="abstract_classes">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                abstract_classes
+            </button>
+        </div> <!-- .card-header -->
+        <div id="abstract_classes" class="collapse show">
+            <div class="card-body">
+                <h2>Abstract Classes</h2>
+
+                <p>
+                    Abstract classes are classes that cannot be instantiated on their own and are meant to be
+                    subclassed. They can contain abstract methods (without implementation) that must be implemented
+                    by derived classes, as well as concrete methods (with implementation) that can be inherited.
+                </p>
+                <p>
+                    Abstract classes are useful when you want to provide a common base for a group of related classes,
+                    but you don't want to allow instantiation of the base class itself. They allow you to define
+                    shared behavior and properties while enforcing that derived classes implement specific methods.
+                </p>
+                <p>
+                    For example, you might have an abstract class called `Shape` that defines an abstract method
+                    `draw()`. Any class that inherits from `Shape` must implement the `draw()` method, but you cannot
+                    create an instance of `Shape` directly. Instead, you would create concrete classes like `Circle`
+                    and `Square` that inherit from `Shape` and provide their own implementations of the `draw()` method.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (abstract_classes) -->
+
+</div> <!-- .container -->

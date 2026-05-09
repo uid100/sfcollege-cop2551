@@ -1,0 +1,79 @@
+<div id="top"> </div>
+
+<div class="container my-4 px-2">
+    <div class="card"> <!-- .card overview -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#overview" aria-expanded="true"
+                aria-controls="overview">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Chapter 11: Understanding parameter arrays
+            </button>
+        </div> <!-- .card-header -->
+        <div id="overview" class="collapse show">
+            <div class="card-body">
+                <h3>Introduction</h3>
+                <p>
+                    Chapter 11 is relatively short.                           
+                </p>
+                <p>
+                    In this chapter, read about the concept of parameter arrays in C#. 
+                    Parameter arrays allow you to pass a variable number of arguments to a method, 
+                    making it easier to work with methods that require a flexible number of parameters.
+                </p>
+                <p>
+                    Again, the textbook is a good resource and reference for the topic. The author 
+                    compares the usage of parameter arrays to the use of overloaded methods. You can
+                    also compare the use of optional parameters in the same context.
+                </p>
+                <p>
+                    The material, of course, also covers the syntax and usage of the <code>params</code> 
+                    keyword, which is used to define a parameter array in a method signature.
+                </p>
+                <p>
+                    Honestly, I find the topic very interesting, but not as important as others.
+                </p>
+                <p>
+                    In fact, the reason it was combined with the previous chapter is that I wanted you 
+                    to be introduced to it, but I did not want to spend a lot of time on it. 
+                </p>
+                <p>
+                    Read the chapter with a mindset of <em>introducing</em> the concept and using the 
+                    chapter as a reference for future use, rather than mastery of the topic.
+                </p>
+                <p>
+                    There may be some (multiple-choice) questions on the chapter quiz, but there are 
+                    not many, and these are high-level questions that shouldn't require extensive 
+                    study and practice. 
+                </p>
+                <p>
+                    I have seen parameter arrays used, but not commonly.
+                </p>
+                <p>
+                    Here is a simple example to give you a quick idea of how they work:
+                    <pre><code>
+using System;
+
+class Program
+{
+    static void PrintNumbers(params int[] numbers) {
+        foreach (int num in numbers)
+            Console.WriteLine(num);
+    }
+
+    static void Main()
+    {
+        PrintNumbers(1, 2, 3, 4);
+        PrintNumbers();
+
+        int[] myArray = { 10, 20, 30 };
+        PrintNumbers(myArray);
+    }
+}
+                    </code></pre>
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (overview) -->
+</div> <!-- .container -->

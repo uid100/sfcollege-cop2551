@@ -1,0 +1,57 @@
+<div id="top"> </div>
+
+<div class="container my-4 px-2">
+    <div class="card"> <!-- .card overview -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#overview" aria-expanded="true"
+                aria-controls="overview">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Chapter 15: Immplementing properties to access fields
+            </button>
+        </div> <!-- .card-header -->
+        <div id="properties class="collapse show">
+            <div class="card-body">
+                <h2>Properties</h2>
+                <p>
+                    Properties in C# are a way to provide controlled access to the fields of a class. They allow
+                    you to define how a field can be accessed and modified, encapsulating the logic for getting and
+                    setting values. This is particularly useful for validation, lazy loading, or triggering events when
+                    a value changes.
+                </p>
+                <p>
+                    A property consists of a get accessor and a set accessor. The get accessor retrieves the value of
+                    the field, while the set accessor assigns a value to it. You can also make properties read-only or
+                    write-only by omitting one of the accessors.
+                </p>
+                <p>
+                    The textbook will provide examples of how to implement properties. Focus your attention on the
+                    <em>why</em> properties are used, as much as the specific syntax. Understanding the purpose of
+                    properties will help you use them effectively in your own code.
+                </p>
+                <p style="font-style: italic; font-weight: bold; text-align: center;">
+                    The use of properties is a fundamental aspect of object-oriented programming and programming in C#.
+                </p>
+                <p>
+                    Properties are a powerful feature of C# that allow you to control access to class fields while
+                    maintaining encapsulation. They can be used to enforce validation rules, trigger events, or even
+                    lazy-load data when needed.
+                </p>
+                <p>
+                    I'll leave the details of the syntax and how to implement properties to the textbook, but here are 
+                    a few typical scenarios to consider:
+                </p>
+                <ul>
+                    <li>Validating input before setting a value</li>
+                    <li>Triggering an event when a value changes</li>
+                    <li>Lazy-loading data only when it is accessed</li>
+                </ul>
+                <p>
+                    I know that I've said that before, but properties are in such common use, it is important to 
+                    understand them well.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- #properties -->
+    </div> <!-- .card overview -->
+</div> <!-- .container -->
