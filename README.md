@@ -1,3 +1,3 @@
-# sfcollege-cop2552
-Object-Oriented Programming 2
+# sfcollege-cop2551
+Object-Oriented Programming 1
 using C#
