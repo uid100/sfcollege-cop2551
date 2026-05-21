@@ -68,7 +68,7 @@
             "04": {
                 "title": "Control Flow - Loops",
                 "pages": {
-                    "overview": { "title": "Module Overview", "type": "content", "source": "content/04/module4.html" },
+                    "overview": { "title": "Module 4 - Overview", "type": "content", "source": "content/04/module4.html" },
                     "ch5": { "title": "Chapter 5. Control Flow - Loops", "type": "content", "source": "content/04/ch5.html" },
                     "lab4": { "title": "Looping Structures", "type": "content", "source": "content/04/lab04.html" },
                     "end": { "title": "End Module 4: Control Flow - Loops", "type": "content", "source": "content/end-module.html"}
@@ -77,7 +77,7 @@
             "05": {
                 "title": "Exception Handling",
                 "pages": {
-                    "overview": { "title": "Module Overview", "type": "content", "source": "content/05/module5.html" },
+                    "overview": { "title": "Module 5 - Overview", "type": "content", "source": "content/05/module5.html" },
                     "ch6": { "title": "Chapter 6. Exception Handling", "type": "content", "source": "content/05/ch6.html" },
                     "lab5": { "title": "Exception Handling", "type": "content", "source": "content/05/lab05.html" },
                     "end": { "title": "End Module 5: Exception Handling", "type": "content", "source": "content/end-module.html"}
@@ -86,7 +86,7 @@
             "06": {
                 "title": "Introduction to Object-Oriented Programming (OOP)",
                 "pages": {
-                    "overview": { "title": "Module Overview", "type": "content", "source": "content/06/module6.html" },
+                    "overview": { "title": "Module 6 - Overview", "type": "content", "source": "content/06/module6.html" },
                     "ch7": { "title": "Chapter 7. Introduction to Object-Oriented Programming (OOP)", "type": "content", "source": "content/06/ch7.html" },
                     "lab6": { "title": "Classes and Objects", "type": "content", "source": "content/06/lab06.html" },
                     "end": { "title": "End Module 6: Object-Oriented Programming (OOP)", "type": "content", "source": "content/end-module.html"}
@@ -95,7 +95,7 @@
             "07": {
                 "title": "Value types, references, enums & structs",
                 "pages": {
-                    "overview": { "title": "Module Overview", "type": "content", "source": "content/07/module7.html" },
+                    "overview": { "title": "Module 7 - Overview", "type": "content", "source": "content/07/module7.html" },
                     "ch8": { "title": "Chapter 8. Value types, references", "type": "content", "source": "content/07/ch8.html" },
                     "ch9": { "title": "Chapter 9. creating value types with enums & structs", "type": "content", "source": "content/07/ch9.html" },
                     "lab7": { "title": "Value and Reference types", "type": "content", "source": "content/07/lab07.html" },
@@ -105,7 +105,7 @@
             "08": {
                 "title": "Working with Arrays and Collections (Introduction)",
                 "pages": {
-                    "overview": { "title": "Module Overview", "type": "content", "source": "content/08/module8.html" },
+                    "overview": { "title": "Module 8 - Overview", "type": "content", "source": "content/08/module8.html" },
                     "ch10": { "title": "Chapter 10. Using Arrays", "type": "content", "source": "content/08/ch10.html" },
                     "ch11": { "title": "Chapter 11. Parameter Arrays", "type": "content", "source": "content/08/ch11.html" },
                     "lab8": { "title": "Working with Arrays", "type": "content", "source": "content/08/lab08.html" },
@@ -115,7 +115,7 @@
             "09": {
                 "title": "Inheritance",
                 "pages": {
-                    "overview": { "title": "Module Overview", "type": "content", "source": "content/09/module9.html" },
+                    "overview": { "title": "Module 9 - Overview", "type": "content", "source": "content/09/module9.html" },
                     "ch12": { "title": "Chapter 12. Inheritance", "type": "content", "source": "content/09/ch12.html" },
                     "lab9": { "title": "Inheritance", "type": "content", "source": "content/09/lab09.html" },
                     "end": { "title": "End Module 9: Inheritance", "type": "content", "source": "content/end-module.html"}
@@ -124,7 +124,7 @@
             "10": {
                 "title": "Polymorphism and Interfaces",
                 "pages": {
-                    "overview": { "title": "Module Overview", "type": "content", "source": "content/10/module10.html" },
+                    "overview": { "title": "Module 10 - Overview", "type": "content", "source": "content/10/module10.html" },
                     "ch13": { "title": "Chapter 13. Polymorphism and Interfaces", "type": "content", "source": "content/10/ch13.html" },
                     "lab10": { "title": "Polymorphism and Interfaces", "type": "content", "source": "content/10/lab10.html" },
                     "end": { "title": "End Module 10: Polymorphism", "type": "content", "source": "content/end-module.html"}
@@ -133,7 +133,7 @@
             "11": {
                 "title": "Properties and fields, Encapsulation and Access Modifiers",
                 "pages": {
-                    "overview": { "title": "Module Overview", "type": "content", "source": "content/11/module11.html" },
+                    "overview": { "title": "Module 11 - Overview", "type": "content", "source": "content/11/module11.html" },
                     "ch15": { "title": "Chapter 15. Properties and fields", "type": "content", "source": "content/11/ch15.html" },
                     "lab11": { "title": "Using Properties", "type": "content", "source": "content/11/lab11.html" },
                     "end": { "title": "End Module 11: Encapsulation", "type": "content", "source": "content/end-module.html"}
@@ -142,7 +142,7 @@
             "12": {
                 "title": "Wrap-up and Final Exam",
                 "pages": {
-                    "overview": { "title": "Module Overview", "type": "content", "source": "content/12/module12.html" },
+                    "overview": { "title": "Module 12 - Overview", "type": "content", "source": "content/12/module12.html" },
                     "end": { "title": "End Module 12: Wrap-up", "type": "content", "source": "content/end-module.html"}
                 }
             },
