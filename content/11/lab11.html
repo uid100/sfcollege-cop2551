@@ -1,0 +1,186 @@
+<div id="top"> </div>
+<h1>Lab 11: Understanding properties</h1>
+<p>
+    Demonstrate ability to define and use properties in C# to encapsulate data, 
+    control access, and use backing fields appropriately.
+</p>
+
+<div class="container my-4 px-2">
+    <!-- ex1 Person class -->
+    <div class="card"> <!-- .card (person) -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#person" aria-expanded="true"
+                aria-controls="person">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Exercise 1: Person Profile
+            </button>
+        </div> <!-- .card-header -->
+        <div id="person" class="collapse hide">
+            <div class="card-body">
+                <h2>
+                    Exercise 1: Person Profile (with Backing Fields)
+                </h2>
+                <p>
+                    Implement a class that uses explicit properties with 
+                    backing fields and simple logic in the accessors.        
+                </p>
+                <p><strong>Requirements:</strong></p>
+                <ul>
+                    <li>
+                        Solution: <code>lab11</code><br>
+                        Project: <code>person</code></li>
+                    </li>
+                    <li>Create a <code>Person</code> class with private fields: <code>_name</code> (string), 
+                        <code>_age</code> (int)</li>
+                    <li>Define public properties:
+                        <ul>
+                            <li><code>Name</code>: getter returns <code>_name</code>, 
+                                setter ensures the value is not null or empty</li>
+                            <li><code>Age</code>: getter returns <code>_age</code>, 
+                                setter ensures value is between 0 and 120</li>
+                        </ul>
+                    </li>
+                    <li>Add a constructor that sets <code>name</code> and <code>age</code>, 
+                        using the setter methods to validate the data</li>
+                    <li>Add a method <code>PrintInfo()</code> that displays name and age</li>
+                    <li>Write a <code>Main()</code> method in another class to instantiate and demonstrate the
+                        <code>Person</code> class and use the <code>PrintInfo()</code> method to display 
+                        the person's information</li>
+                </ul>
+
+<div class="example">
+Name: Alice
+Age: 25
+Name: Bob
+Age: 30
+</div>
+
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (person) -->
+
+    <!-- ex2 readonly Product Info -->
+    <div class="card"> <!-- .card (product) -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#product" aria-expanded="true"
+                aria-controls="product">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Exercise 2: Read-Only Product Info
+            </button>
+        </div> <!-- .card-header -->
+        <div id="product" class="collapse hide">
+            <div class="card-body">
+                <h2>
+                    Exercise 2: Read-Only Product Info
+                </h2>
+                <p>
+                    Implement a class that uses read-only properties to expose product information.
+                </p>
+                <p><strong>Requirements:</strong></p>
+            <ul>
+                <li>
+                    Solution: <code>lab11</code><br>
+                    Project: <code>product</code></li>
+                </li>
+                <li>Create a <code>Product</code> class with private fields: <code>_name</code> (string), 
+                    <code>_price</code> (decimal)</li>
+                <li>Define public read-only properties:
+                <ul>
+                    <li><code>Name</code>: getter returns <code>_name</code></li>
+                    <li><code>Price</code>: getter returns <code>_price</code></li>
+                </ul>
+                </li>
+                <li>Add a constructor that sets the product name and price</li>
+                <li>Include <code>ApplyDiscount(double percent)</code> method<br>
+                    <em>How will <code>PrintInfo()</code> be affected?</em></li>
+                <li>In <code>Main()</code>, create at least three <code>Product</code> instances, apply a 
+                    discount to one, and display their information</li>
+            </ul>
+<div class="example">
+Product: Coffee Mug
+Price: $8.99
+Product: T-Shirt
+Price: $14.99
+Product: Water Bottle
+Price after discount: $9.59
+</div>
+
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (product) -->
+
+    <!-- ex3 vehicle registry with Object Initializers -->
+    <div class="card"> <!-- .card (vehicle) -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#vehicle" aria-expanded="true"
+                aria-controls="vehicle">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Exercise 3: Vehicle Registry with Object Initializers
+            </button>
+        </div> <!-- .card-header -->
+        <div id="vehicle" class="collapse hide">
+            <div class="card-body">
+                <h2>
+                    Exercise 3: Vehicle Registry with Object Initializers
+                </h2>
+                <p>
+                    Use auto-implemented properties and object initializers for creating and displaying objects.
+
+                </p>
+                <p><strong>Requirements:</strong></p>
+            <ul>
+                <li>
+                    Solution: <code>lab11</code><br>
+                    Project: <code>vehicle</code></li>
+                </li>
+                <li>Create a <code>Vehicle</code> class with the following auto-properties:
+                    <ul>
+                        <li><code>Make</code> (string)</li>
+                        <li><code>Model</code> (string)</li>
+                        <li><code>Year</code> (int)</li>
+                        <li><code>IsElectric</code> (bool)</li>
+                    </ul>
+                </li>
+                <li>In <code>Main()</code>, create at least two <code>Vehicle</code> instances using object initializer syntax.</li>
+                <li>Print a summary of each vehicle.</li>
+            </ul>   
+                <div class="example">
+2022 Tesla Model 3 - Electric: Yes  
+2015 Toyota Corolla - Electric: No
+                </div>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (vehicle) -->
+
+    <div class="card"> <!-- .card submit -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#submit" aria-expanded="true"
+                aria-controls="submit">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Submit Your Work
+            </button>
+        </div> <!-- .card-header -->
+        <div id="submit" class="collapse hide">
+            <div class="card-body">
+                <p>Submit your completed zipped lab folder via the course submission portal as in 
+                    previous lab assignments.</p>
+                <p><strong>Note:</strong>
+                <ul>
+                    <li>Ensure all code is well-documented, including correct required header 
+                    information and follows best practices.</li>
+                    <li>Identifiers, including filenames should be descriptive and meaningful.</li>
+                    <li>No hard-coded values should be used in your code, except from test methods called 
+                        from <code>Main()</code></li>
+                </ul>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (submit) -->
+</div> <!-- .container -->

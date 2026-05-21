@@ -1,0 +1,396 @@
+<div id="top"> </div>
+<h1>Lab 09: using class inheritance</h1>
+<p style="margin:10px;">
+    <strong>Objective:</strong> extend base classes to derived classes in C#.
+</p>
+
+
+<div class="container my-4 px-2">
+    <div class="card"> <!-- .card (overview) -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#overview" aria-expanded="true"
+                aria-controls="overview">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Overview (click each header to hide/show details)
+            </button>
+        </div> <!-- .card-header -->
+        <div id="overview" class="collapse show">
+            <div class="card-body">
+                <p>
+                    Design and implement a set of classes that demonstrate inheritance in C#.
+                </p>
+                <p>
+                    Remember the principle of Don't Repeat Yourself (DRY). Inheritance allows you to
+                    create a base class with common properties and methods, and then derive new classes
+                    that inherit those properties and methods. This is intended to reduce code duplication
+                    and makes your code more maintainable. If you find yourself repeating code in
+                    multiple classes, consider creating a base class that contains the common code and then
+                    derive the other classes from that base class.
+                </p>
+                <p>
+                    <em>Copy & Paste</em> is a <em>Red Flag</em>.
+                </p>
+                <p>&nbsp;</p>
+                <p>
+                    Click on the headers below to expand or collapse the details for each exercise. Read the 
+                    instructions carefully.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (overview) -->
+
+    <!-- guided exercise for the vehicle base class and derived classes -->
+    <div class="card"> <!-- .card (vehicle) -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#vehicle" aria-expanded="true"
+                aria-controls="vehicle">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Exercise 1: Vehicles - Guided Exercise
+            </button>
+        </div> <!-- .card-header -->
+        <div id="vehicle" class="collapse hide">
+            <div class="card-body">
+                <h2>Exercise 1: Base Class and Derived Classes</h2>
+                <p>
+                    In this exercise, you will create a base class called <code>Vehicle</code>
+                    and derived classes as described below.
+                </p>
+                <img src="/course-content/images/vehicle-inheritance.jpg"
+                    alt="Vehicle Class Diagram" class="img-fluid mb-3" 
+                    style="margin:auto;" />
+                <p>
+                    The UML diagram shows the inheritance between the classes. Inheritance is shown 
+                    by the arrow pointing from the derived class to the base class. The derived classes
+                    inherit the properties and methods of the base class, allowing for code reuse and
+                    polymorphism. The arrow always points from the derived class to the base class 
+                    indicating that the derived class contains its members as well as those of the base, 
+                    not the other way around.
+                </p>
+                <p>
+                    In documentation, you will see the terms <em>base class</em> and <em>derived class</em>. 
+                    Sometimes you will see the term <em>superclass</em> and <em>subclass</em> or <em>parent
+                    class</em> and <em>child class</em>. These terms are interchangeable and
+                    refer to the same relationship. 
+                </p>
+                <ol id="ex-utils-steps">
+                    <li> <!-- create the project -->
+                        <details><summary>Create the project</summary>
+                            <p>
+                                <ul>
+                                    <li>Solution:  Lab09</li>
+                                    <li>Project: Cars</li>
+                                </ul>
+                            </p>
+                            <p>
+Folder structure <em>(so far.)</em>:<br>
+<pre><code>
+    Lab09/
+    └── Lab09.sln
+    └── Cars
+        ├── Car.cs
+        ├── CarsTestApp.cs
+        ├── Convertible.cs
+        ├── Motorcycle.cs
+        ├── Truck.cs
+        ├── Vehicle.cs
+        ├── VehicleApp.cs
+        └── Cars.csproj
+    └── . . .
+        ├── . . .
+
+                                </code></pre>
+                            </p>
+                        </details>
+                    </li> <!-- create the project -->
+                    <li> <!-- edit the source code -->
+                        <details><summary>Edit the source code</summary>
+                            <p>
+                                Create the base and derived classes as shown.
+                            </p>
+                            <h4>Vehicle.cs</h4>
+                            <img src="/course-content/images/Vehicle-cs.png"
+                                alt="Vehicle Class Code" class="img-fluid mb-3" 
+                                style="width: 80%; margin:auto;" />
+                            <h4>Car.cs</h4>
+                            <img src="/course-content/images/Car-cs.png"
+                                alt="Car Class Code" class="img-fluid mb-3"
+                                style="width: 80%; margin:auto;" />
+                            <h4>Truck.cs</h4>
+                            <img src="/course-content/images/Truck-cs.png"
+                                alt="Truck Class Code" class="img-fluid mb-3"
+                                style="width: 80%; margin:auto;" />
+                            <h4>Motorcycle.cs</h4>
+                            <img src="/course-content/images/Motorcycle-cs.png"
+                                alt="Motorcycle Class Code" class="img-fluid mb-3"
+                                style="width: 80%; margin:auto;" />
+                            <h4>Convertible.cs</h4>
+                            <img src="/course-content/images/Convertible-cs.png"
+                                alt="Convertible Class Code" class="img-fluid mb-3"
+                                style="width: 80%; margin:auto;" />
+                            <p>
+                                Make sure to include the <code>ToString()</code> method in each derived class
+                                to display the details of the vehicle.
+                            </p>
+                        </details>
+                    </li> <!-- edit the source code -->
+                    <li> <!-- test the classes -->
+                        <details><summary>Test the classes</summary>
+                            <p>
+                                Create a test <em>driver</em> file in the <code>Vehicles</code> project.
+                                In the <code>Main</code> method, create instances of each derived class and
+                                demonstrate their functionality by calling their methods and displaying 
+                                their properties.
+                            </p>
+                            <p>
+                                Start with the code provided below in the <code>CarsTestApp.cs</code> file:
+                            </p>
+                            <h4>CarsTestApp.cs</h4>
+                            <img src="/course-content/images/CarsTestApp-cs.png"
+                                alt="Cars Test App Code" class="img-fluid mb-3"
+                                style="width: 80%; margin:auto;" />
+                            <p>
+                                The code is not complete. Add multiple instances of each class and call their
+                                methods to demonstrate their functionality.
+                            </p>
+                            <h4 style="font-style: italic;">Reminder!</h4>
+                            <p>
+                                Make sure to include the updated header information in each of your source files.
+                                The header should include your name, date, course, and a brief description of the
+                                file's purpose.
+                            </p>
+                        </details>
+                    </li> <!-- test the classes -->
+                </ol>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (vehicle) -->
+
+    <div class="card"> <!-- .card (shapes) -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#shapes" aria-expanded="true"
+                aria-controls="shapes">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Exercise 2: Shapes
+            </button>
+        </div> <!-- .card-header -->
+        <div id="shapes" class="collapse hide">
+            <div class="card-body">
+                <h2>Exercise 2: Shapes</h2>
+                <p>
+                    In this exercise, create a base class called <code>Shape</code> and derived classes
+                        <code>Circle</code>, <code>Rectangle</code>, and <code>Triangle</code>.
+                </p>
+                <ol id="ex-shapes-steps">
+                    <li> <!-- create the project -->
+                        <details><summary>Create the project</summary>
+                            <p>
+                                Create a new project called <code>Shapes</code> in the same solution as the
+                                previous exercise.
+                            </p>
+                            <p>
+                                <ul>
+                                    <li>Solution:  Lab09</li>
+                                    <li>Project: Shapes</li>
+                                </ul>
+                            </p>
+                            <p>
+                                Each class should be in its own file. The file names should match the class names.
+                            </p>
+                        </details>
+                    </li> <!-- create the project -->
+                    <li> <!-- edit the source code -->
+                        <details><summary>Design and create the source code</summary>
+                            <h4>Base Class</h4>
+                            <ul>
+                                <li>
+                                    Create an abstract class named Shape. This class will serve as the
+                                    blueprint for all geometric shapes in our hierarchy. It should contain
+                                    common properties and an abstract method <code>GetArea()</code>for
+                                    calculating the area.
+                                </li>
+                                <li>
+                                    Add a public property for the Name of the shape (e.g., "Circle", "Rectangle").
+                                </li>
+                                <li>
+                                    Define an abstract method called GetArea() that returns a double. This method
+                                    will have no implementation in the base class, forcing derived classes to provide
+                                    their own.
+                                </li>
+                            </ul>
+                            <h4>Derived Classes</h4>
+                            <p>
+                                Create derived classes for each specific shape: Circle, Rectangle, and Triangle.
+                            </p>
+                            <p>
+                                Each derived class should implement the GetArea() method to calculate the area 
+                                of the specific shape.
+                            </p>
+                            <h4 style="font-style: italic;">Optionally:</h4>
+                            <p>
+                                <ul>
+                                    <li>Add more derived shape classes such as <code>Square</code> or <code>Ellipse</code>.</li>
+                                    <li>Implement a method <code>GetPerimeter()</code> in the base class (<code>abstract</code> 
+                                        or <code>virtual</code> depending on whether all shapes have a common perimeter calculation).</li>
+                                </ul>
+                            </p>
+                        </details>
+                    </li> <!-- edit the source code -->
+                    <li> <!-- test the classes -->
+                        <details><summary>Test the classes</summary>
+                            <p>
+                                Create a test <em>driver</em> file in the <code>Shapes</code> project.
+                                In the <code>Main</code> method, create instances of each derived class and
+                                demonstrate their functionality by calling their methods and displaying 
+                                their properties.
+                            </p>
+                            <p>
+                                <em>Optionally:</em>
+                                <ul>
+                                    <li>Create a list of shapes and write a method to calculate the total area 
+                                        of all shapes in the list.</li>
+                                    <li>Use the <code>Debug.Assert()</code> method to verify your results against your 
+                                        calculated expected values.</li>
+                                </ul>
+                            </p>
+                        </details>
+                    </li> <!-- test the classes -->
+                </ol>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (shapes) -->
+
+    <div class="card"> <!-- .card (product catalog) -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#product-catalog" aria-expanded="true"
+                aria-controls="product-catalog">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Exercise 3: Product Catalog
+            </button>
+        </div> <!-- .card-header -->
+        <div id="product-catalog" class="collapse hide">
+            <div class="card-body">
+                <h2>Exercise 3: Product Catalog</h2>
+                <p>
+                    In this exercise, you will create a base class called <code>Product</code> and derived classes
+                    for different types of products.
+                </p>
+                <ol id="ex-product-steps">
+                    <li> <!-- create the project -->
+                        <details><summary>Create the project</summary>
+                            <p>
+                                Create a new project called <code>ProductCatalog</code> in the same solution as the
+                                previous exercises.
+                            </p>
+                            <p>
+                                <ul>
+                                    <li>Solution:  Lab09</li>
+                                    <li>Project: ProductCatalog</li>
+                                </ul>
+                            </p>
+                        </details>
+                    </li> <!-- create the project -->
+                    <li> <!-- edit the source code -->
+                        <details><summary>Design and create the source code</summary>
+                            <h4>Base Class</h4>
+                            <ul>
+                                <li>Create a base class named Product. </li>
+                                <li>Add properties for common fields such as Name, Price, and Description.</li>
+                                <li>Define a method ToString() to display product details.</li>
+                            </ul>
+                            <h4>Derived Classes</h4>
+                            <ul>
+                                <li>Create derived classes for specific product types, such as Electronics, Clothing, and Food.</li>
+                                <li>Each derived class should have additional fields and methods specific to that product type.
+                                    This part may require some creative thinking.</li>
+                                <li>Override the ToString() method in each derived class to display the specific details of the product.</li>
+                            </ul>
+                        </details>
+                    </li> <!-- edit the source code -->
+                    <li> <!-- test the classes -->
+                        <details><summary>Test the classes</summary>
+                            <p>
+                                In exercise 1 above, you used the <code>List&lt;T&gt;</code> data structure. This data type
+                                is a much higher level data structure, but its usage is straightforward and similar to
+                                arrays. In this exercise, you may use the <code>List&lt;Product&gt;</code> structure, or you may
+                                create an array of products (<code>Product[]</code>).
+                            </p>
+                            <p>
+                                Create a <code>ProductCatalog</code> class to instantiate the derived classes and test 
+                                their functionality.
+                            </p>
+                            <p>
+                                In the <code>Main</code> method, create instances of each derived class
+                                and demonstrate their functionality by calling their methods and displaying
+                                their properties (using the <code>ToString()</code> method).
+                            </p>
+                        </details>
+                    </li> <!-- test the classes -->
+                </ol>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (product catalog) -->
+
+    <div class="card"> <!-- .card (submit) -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#submit" aria-expanded="true" aria-controls="submit">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Review and Submit
+            </button>
+        </div> <!-- .card-header -->
+        <div id="submit" class="collapse hide">
+            <div class="card-body">
+                <h2>Review and Submit</h2>
+                <ol>
+                    <li>
+                        <details>
+                            <summary>Review</summary>
+                            <p>
+                                Before you submit your files, go back through the instructions and make
+                                sure you haven't forgotten anything. Did you include the updated header 
+                                information in each of your source files? Are the project files named
+                                correctly and are they all included in the solution (.sln) file?
+                            </p>
+                            <p>
+                                Review your code and make sure it is well organized, properly formatted,
+                                appropriately commented, and follows the naming conventions.
+                            </p>
+                            <p style="font-style: italic;">
+                                Did you remember to include the required header comment block in each of your 
+                                source files?
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Zip the solution folder</summary>
+                            <p>
+                                Zip the solution folder and all of its contents. 
+                                This should include the <code>.sln</code> file and all of the project folders.
+                                Make sure to include all the projects you created for this lab.
+                            </p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Submit your work</summary>
+                            <p>
+                                Submit the zipped solution folder to the assignment submission link in
+                                Canvas.
+                            </p>
+                        </details>
+                    </li>
+                </ol>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (submit) -->
+
+</div> <!-- .container -->

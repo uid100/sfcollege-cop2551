@@ -1,0 +1,392 @@
+<div id="top"> </div>
+<h1>Lab 05: Exception Handling</h1>
+<p style="margin:10px;">
+    <strong>Objective:</strong> Use try-catch-finally blocks to handle exceptions in C# code.
+</p>
+<div class="container my-4 px-2">
+    <div class="card"> <!-- .card (overview) -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#overview" aria-expanded="true"
+                aria-controls="overview">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Overview (click each header to hide/show details)
+            </button>
+        </div> <!-- .card-header -->
+        <div id="overview" class="collapse show">
+            <div class="card-body">
+                <p>
+                    In this lab, you will practice using exception handling in C# code. You will learn how to
+                    use try-catch-finally blocks to handle exceptions and how to create custom exceptions.
+                </p>
+                <p>
+                    As before, you will create a single solution with multiple projects. Each project will
+                    contain a separate exercise that demonstrates different aspects of exception handling.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (overview) -->
+
+    <div class="card"> <!-- .card (ex1) -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#ex1" aria-expanded="true" aria-controls="ex1">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Exercise #1: Using try-catch-finally
+            </button>
+        </div> <!-- .card-header -->
+        <div id="ex1" class="collapse hide">
+            <div class="card-body">
+                <h2>Exercise #1: Safe Division with Exception Handling</h2>
+                <ol id="ex1-steps">
+                    <li> <!-- create the project -->
+                        <details>
+                            <summary>Create the project</summary>
+                            <p>
+                                Create a new solution folder named <code>Lab05</code> and add a new project to it.
+                                <ul>
+                                    <li>project name: <code>Division</code></li>
+                                    <li>solution name: <code>Lab05</code></li>
+                                </ul>
+                            </p>
+                            <p>
+                                <code>Lab05</code><br>
+                                <code>├── Lab03.sln</code><br>
+                                <code>└── Division</code><br>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;├── Division.csproj</code><br>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;└── Program.cs</code><br>
+                            </p>
+                            <h3>Objective</h3>
+                            <p>
+                                Use a try-catch block to handle potential exceptions when dividing 
+                                two numbers entered by the user, including handling division by zero 
+                                and invalid input.
+                            </p>
+                            <h3>Instructions</h3>
+                            <ol>
+                                <li>Ask the user to enter two numbers: a numerator and a denominator.</li>
+                                <li>Convert the input to integers using int.Parse() (or Convert.ToInt32()).</li>
+                                <li>Perform division: numerator / denominator.</li>
+                                <li>Use try-catch to:
+                                    <ol>
+                                        <li>Catch <code>DivideByZeroException</code> and display a message.</li>
+                                        <li>Catch <code>FormatException</code> for invalid input and display a message.</li>
+                                        <li>Catch any other exceptions and display a generic error message.</li>
+                                    </ol>
+                                </li>
+                                <li>Display a farewell message at the end using a finally block.</li>
+                            </ol>
+                            <h3>Example Output</h3>
+                            <p> Case 1: Valid Input 
+                                <code><pre>
+Enter numerator: 10
+Enter denominator: 2
+Result: 5
+Thank you for using the program!</pre></code>
+                            </p>
+                            <p> Case 2: Division by Zero 
+                                <code><pre>
+Enter numerator: 10
+Enter denominator: 0
+Error: Division by zero is not allowed.
+Thank you for using the program!</pre></code>
+                            </p>
+                            <p> Case 3: Invalid Input 
+                                <code><pre>
+Enter numerator: ten
+Enter denominator: 2
+Error: Invalid input. Please enter a valid number.
+Thank you for using the program!</pre></code>
+                            </p>
+                            <p>
+                                Don't forget to add the required header information.
+                            </p>
+                        </details>
+                    </li> <!-- create the project -->
+                    <li> <!-- explain -->
+                        <details>
+                            <summary>Explanation</summary>
+                            <h2>Understanding the code</h2>
+                            <p>
+                                The code will use a try-catch block to handle exceptions that may occur during the
+                                division operation. The try block contains the code that may throw an exception,
+                                while the catch blocks handle specific exceptions that may occur.
+                            </p>
+                            <p>
+                                The first catch block should handle the <code>DivideByZeroException</code>, which occurs
+                                when the denominator is zero. The second catch block handles the <code>FormatException</code>,
+                                which occurs when the input cannot be converted to an integer. The third catch block
+                                handles any other exceptions that may occur. The order of these catch blocks is important,
+                                as the most specific exceptions should be caught first.
+                            </p>
+                            <p>
+                                The finally block is executed regardless of whether an exception occurs or not. It
+                                displays a farewell message to the user.
+                            </p>
+                            <p>
+                                The program should use <code>int.Parse()</code> to convert the input to an integer. If the
+                                input is not a valid integer, a <code>FormatException</code> will be thrown.
+                            </p>
+                            <p>
+                                The program also uses <code>Console.ReadLine()</code> to read input from the user.
+                                If the user enters a non-numeric value, a <code>FormatException</code> will be thrown.
+                            </p>
+                        </details>
+                    </li> <!-- edit the source code -->
+                    <li> <!-- run and test the program -->
+                        <details>
+                            <summary>Run and test the program</summary>
+                            <p>
+                                Run the program by clicking the green arrow (Start button) in the toolbar or by
+                                pressing <code>Ctrl + F5</code>. Or you can use either of the Start options in
+                                the Debug menu.
+                            </p>
+                            <p>
+                                Test the program with valid and invalid inputs.
+                            </p>
+                        </details>
+                    </li> <!-- run and test the program -->
+                </ol> <!-- #ex1-steps -->
+                <p style="font-style: italic; margin: 20px;">
+                    Continue to the next exercise.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (ex1) -->
+
+    <div class="card"> <!-- .card (ex2) -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#ex2" aria-expanded="true" aria-controls="ex2">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Exercise #2: Using Checked Context for Overflow
+            </button>
+        </div> <!-- .card-header -->
+        <div id="ex2" class="collapse hide">
+            <div class="card-body">
+                <h2>Exercise #2: Overflowing integers</h2>
+                <ol>
+                    <li> <!-- create the project -->
+                        <details>
+                            <summary>Create the project</summary>
+                            <p>
+                                From the solution folder (Lab05), create a new project and add it to the solution.
+                            </p>
+                            <p>
+                                <ul>
+                                    <li>project name: <code>Overflow</code></li>
+                                    <li>solution name: <code>Lab05</code></li>
+                                </ul>
+                            </p>
+                            <h3>Objective</h3>
+                            <p>
+                                Learn how an `OverflowException` can occur during arithmetic operations when a value 
+                                exceeds the limits of a data type (e.g., `int.MaxValue`), and how to catch it.
+                            </p>
+                            <h3>Instructions</h3>
+                            <p>
+                                <ol>
+                                    <li>Use a `checked` block to enable overflow detection.</li>
+                                    <li>Set an integer variable to `int.MaxValue`.</li>
+                                    <li>Try adding 1 to the variable inside the `checked` block.</li>
+                                    <li>Use a `try-catch` block to catch the `OverflowException` and display an error message.</li>
+                                </ol>
+                            </p>
+                            <h3>Example Output</h3>
+                            <p>
+                                <code><pre>
+Attempting to add 1 to int.MaxValue...
+Overflow occurred! Value was too large for an int.</pre></code>
+                            </p>
+                        </details>
+                    </li> <!-- create the project -->
+                    <li> <!-- explain -->
+                        <details>
+                            <summary>Explanation</summary>
+                            <h2>Understanding the code</h2>
+                            <p>
+                                The code will use a `checked` block to enable overflow detection. When an arithmetic
+                                operation exceeds the limits of the data type, an `OverflowException` will be thrown.
+                            </p>
+                            <p>
+                                The `try-catch` block will catch the `OverflowException` and display an error message.
+                                This allows the program to handle the exception gracefully instead of crashing.
+                            </p>
+                        </details>
+                    </li> <!-- explain -->
+                    <li> <!-- run and test the program -->
+                        <details>
+                            <summary>Run and test the program</summary>
+                            <p>
+                                Test the program to ensure it correctly detects the overflow and displays the error message.
+                            </p>
+                        </details>
+                    </li> <!-- run and test the program -->
+                </ol>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (ex2) -->
+
+    <div class="card"> <!-- .card (ex3) -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#ex3" aria-expanded="true" aria-controls="ex3">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Exercise #3: Throwing exceptions
+            </button>
+        </div> <!-- .card-header -->
+        <div id="ex3" class="collapse hide">
+            <div class="card-body">
+                <h2>Exercise #3: </h2>
+                <ol>
+                    <li>
+                        <details>
+                            <summary>Create the project</summary>
+                            <p>
+                                From the solution folder (Lab05), create a new project and add it to the solution.
+                            </p>
+                            <p>
+                                <ul>
+                                    <li>project name: <code>MonthName</code></li>
+                                    <li>solution name: <code>Lab05</code></li>
+                                </ul>
+                            </p>
+                            <h3>Objective</h3>
+                            <p>
+                                Learn how to throw exceptions in C# and how to catch them in a try-catch block.
+                            </p>
+                            <h3>Instructions</h3>
+                            <ol>
+                                <li>
+                                    Write a method <code>monthName</code> that:
+                                    <ul>
+                                        <li>Takes an integer <code>month</code> as a parameter.</li>
+                                        <li>Uses a switch expression to return the name of the month.</li>
+                                        <li>If the input is not between 1 and 12, throws an <code>ArgumentOutOfRangeException</code>.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    In the <code>Main()</code> method:
+                                    <ul>
+                                        <li>Ask the user to enter a month number (1–12).</li>
+                                        <li>Call the <code>monthName()</code> method with the user's input.</li>
+                                        <li>Catch and display any exceptions that occur.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <h3>Example Output</h3>
+                            <p> Case 1: Valid Input
+                                <code><pre>
+Enter a month number (1-12): 5
+The month is: May</pre></code>
+                            </p>
+                            <p> Case 2: Invalid Input
+                                <code><pre>
+Enter a month number (1-12): 13
+Error: Month must be between 1 and 12.</pre></code>
+                            </p>
+                            <p>
+                                Don't forget to add the required header information.
+                            </p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Explanation</summary>
+                            <h2>Understanding the code</h2>
+                            <p>
+                                The method <code>monthName</code> uses a switch expression to return the name of the month
+                                based on the input number. If the input is not between 1 and 12, it throws an
+                                <code>ArgumentOutOfRangeException</code>.
+                            </p>
+                            <p>
+                                The <code>Main()</code> method prompts the user for input, calls the <code>monthName()</code>
+                                method, and catches any exceptions that may occur.
+                            </p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Run and test the program</summary>
+                            <p>
+                                Run the program to ensure it correctly handles valid and invalid inputs.
+                            </p>
+                            <p>
+                                Test the program with various inputs, including valid month numbers (1–12) and invalid
+                                numbers (e.g., 0, 13, -1).
+                            </p>
+                        </details>
+                    </li>
+                </ol>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (ex3) -->
+
+    <div class="card"> <!-- .card (submit) -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#submit" aria-expanded="true" aria-controls="submit">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Review and Submit
+            </button>
+        </div> <!-- .card-header -->
+        <div id="submit" class="collapse hide">
+            <div class="card-body">
+                <h2>Review and Submit</h2>
+                <ol>
+                    <li>
+                        <details>
+                            <summary>Let's review</summary>
+                            <p>
+                                In this lab, you created a solution folder named <code>Lab05</code> and added three projects:
+                                <code>Division</code>, <code>Overflow</code>, and <code>MonthName</code>.
+                                Each project demonstrated different aspects of exception handling in C#.
+                            </p>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Zip the solution folder</summary>
+                            <p>
+                                Zip the solution folder <code>Lab05</code> and all of its contents. 
+                                This should include the <code>.sln</code> file and all of the project folders.
+                                Make sure to include all (3) of the projects you created for this lab.
+                            </p>
+                            <p>
+                                The solution folder should look like this:
+                            </p>
+                            <p>
+                                <code>Lab05</code><br>
+                                <code>├── Lab05.sln</code><br>
+                                <code>├── Division</code><br>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;├── Division.csproj</code><br>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;└── Program.cs</code><br>
+                                <code>├── Overflow</code><br>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;├── Overflow.csproj</code><br>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;└── Program.cs</code><br>
+                                <code>└── MonthName</code><br>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;├── MonthName.csproj</code><br>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;└── Program.cs</code><br>
+                            </p>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Submit your work</summary>
+                            <p>
+                                Submit the zipped solution folder to the assignment submission link in
+                                Canvas.
+                            </p>
+                        </details>
+                    </li>
+                </ol>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (submit) -->
+
+
+</div> <!-- .container -->
