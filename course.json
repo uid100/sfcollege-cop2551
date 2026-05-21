@@ -88,6 +88,7 @@
                 "pages": {
                     "overview": { "title": "Module 6 - Overview", "type": "content", "source": "content/06/module6.html" },
                     "ch7": { "title": "Chapter 7. Introduction to Object-Oriented Programming (OOP)", "type": "content", "source": "content/06/ch7.html" },
+                    "class-diagrams": { "title": "UML Class Diagrams", "type": "content", "resource": "http://uid100.github.io/edu-core/shared/class-diagrams.html" },
                     "lab6": { "title": "Classes and Objects", "type": "content", "source": "content/06/lab06.html" },
                     "end": { "title": "End Module 6: Object-Oriented Programming (OOP)", "type": "content", "source": "content/end-module.html"}
                 }
