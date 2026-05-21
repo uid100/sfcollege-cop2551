@@ -61,6 +61,7 @@
                 "pages": {
                     "overview": {"title": "Module 3 - Conditional Processing", "type": "content", "source": "content/03/module3.html" },
                     "ch4": {"title": "Chapter 4. Control Flow - Decision Making", "type": "content", "source": "content/03/ch4.html"},
+                    "lab3": {"title": "Conditional Processing", "type": "content", "source": "content/03/lab03.html"},
                     "end": {"title": "End Module 3: Control Flow - Decision Making","type": "content","source":  "content/end-module.html"}
                 }
             },            
@@ -69,6 +70,7 @@
                 "pages": {
                     "overview": { "title": "Module Overview", "type": "content", "source": "content/04/module4.html" },
                     "ch5": { "title": "Chapter 5. Control Flow - Loops", "type": "content", "source": "content/04/ch5.html" },
+                    "lab4": { "title": "Looping Structures", "type": "content", "source": "content/04/lab04.html" },
                     "end": { "title": "End Module 4: Control Flow - Loops", "type": "content", "source": "content/end-module.html"}
                 }
             },
@@ -77,6 +79,7 @@
                 "pages": {
                     "overview": { "title": "Module Overview", "type": "content", "source": "content/05/module5.html" },
                     "ch6": { "title": "Chapter 6. Exception Handling", "type": "content", "source": "content/05/ch6.html" },
+                    "lab5": { "title": "Exception Handling", "type": "content", "source": "content/05/lab05.html" },
                     "end": { "title": "End Module 5: Exception Handling", "type": "content", "source": "content/end-module.html"}
                 }
             },
@@ -85,6 +88,7 @@
                 "pages": {
                     "overview": { "title": "Module Overview", "type": "content", "source": "content/06/module6.html" },
                     "ch7": { "title": "Chapter 7. Introduction to Object-Oriented Programming (OOP)", "type": "content", "source": "content/06/ch7.html" },
+                    "lab6": { "title": "Classes and Objects", "type": "content", "source": "content/06/lab06.html" },
                     "end": { "title": "End Module 6: Object-Oriented Programming (OOP)", "type": "content", "source": "content/end-module.html"}
                 }
             },
@@ -94,6 +98,7 @@
                     "overview": { "title": "Module Overview", "type": "content", "source": "content/07/module7.html" },
                     "ch8": { "title": "Chapter 8. Value types, references", "type": "content", "source": "content/07/ch8.html" },
                     "ch9": { "title": "Chapter 9. creating value types with enums & structs", "type": "content", "source": "content/07/ch9.html" },
+                    "lab7": { "title": "Value and Reference types", "type": "content", "source": "content/07/lab07.html" },
                     "end": { "title": "End Module 7: Value and Reference types", "type": "content", "source": "content/end-module.html"}
                 }
             },
@@ -103,6 +108,7 @@
                     "overview": { "title": "Module Overview", "type": "content", "source": "content/08/module8.html" },
                     "ch10": { "title": "Chapter 10. Using Arrays", "type": "content", "source": "content/08/ch10.html" },
                     "ch11": { "title": "Chapter 11. Parameter Arrays", "type": "content", "source": "content/08/ch11.html" },
+                    "lab8": { "title": "Working with Arrays", "type": "content", "source": "content/08/lab08.html" },
                     "end": { "title": "End Module 8: Arrays and Collections", "type": "content", "source": "content/end-module.html"}
                 }
             },
@@ -111,6 +117,7 @@
                 "pages": {
                     "overview": { "title": "Module Overview", "type": "content", "source": "content/09/module9.html" },
                     "ch12": { "title": "Chapter 12. Inheritance", "type": "content", "source": "content/09/ch12.html" },
+                    "lab9": { "title": "Inheritance", "type": "content", "source": "content/09/lab09.html" },
                     "end": { "title": "End Module 9: Inheritance", "type": "content", "source": "content/end-module.html"}
                 }
             },
@@ -119,6 +126,7 @@
                 "pages": {
                     "overview": { "title": "Module Overview", "type": "content", "source": "content/10/module10.html" },
                     "ch13": { "title": "Chapter 13. Polymorphism and Interfaces", "type": "content", "source": "content/10/ch13.html" },
+                    "lab10": { "title": "Polymorphism and Interfaces", "type": "content", "source": "content/10/lab10.html" },
                     "end": { "title": "End Module 10: Polymorphism", "type": "content", "source": "content/end-module.html"}
                 }
             },
@@ -127,6 +135,7 @@
                 "pages": {
                     "overview": { "title": "Module Overview", "type": "content", "source": "content/11/module11.html" },
                     "ch15": { "title": "Chapter 15. Properties and fields", "type": "content", "source": "content/11/ch15.html" },
+                    "lab11": { "title": "Using Properties", "type": "content", "source": "content/11/lab11.html" },
                     "end": { "title": "End Module 11: Encapsulation", "type": "content", "source": "content/end-module.html"}
                 }
             },
