@@ -123,6 +123,11 @@
                                 leave platform settings to All.
                             </p>
                             <p>
+                                <span style="font-weight: bold">Important:</span> Make sure to select<br>
+                                <em>Console App (.NET)</em> <br>
+                                and not <em>Console App (.NET Framework)</em>.
+                            </p>
+                            <p>
                                 Select the Console Application template and click Next.
                             </p>
                             <p>
@@ -300,6 +305,12 @@ Console.WriteLine($"The product of {number1} and {number2} is {product}.");
                         </details>
                     </li> <!-- run and test the program -->
                 </ol> <!-- #ex1-steps -->
+                <p>
+                    Before moving on to the next exercise, open your <code>.csproj</code> file and
+                    confirm that it contains:<br>
+                    <code>&lt;TargetFramework&gt;net8.0&lt;/TargetFramework&gt;</code> or similar,</br>
+                    and that it does not contain any references to .NET Framework (net4.x).
+                </p>
                 <p style="font-style: italic; margin: 20px;">
                     Continue to the next exercise.
                 </p>
