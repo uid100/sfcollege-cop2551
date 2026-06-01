@@ -117,40 +117,40 @@ using System;
 
 class Program
 {
-static double GetDimension(string name)
-{
-    Console.Write($"Enter {name}: ");
-    double value;
-    while (!double.TryParse(Console.ReadLine(), out value) || value < 0)
+    static double GetDimension(string name)
     {
-        Console.Write($"Invalid input. Please enter a positive number for {name}: ");
+        Console.Write($"Enter {name}: ");
+        double value;
+        while (!double.TryParse(Console.ReadLine(), out value) || value < 0)
+        {
+            Console.Write($"Invalid input. Please enter a positive number for {name}: ");
+        }
+        return value;
     }
-    return value;
-}
 
-static double CalculateVolume(double height, double width, double depth)
-{
-    return height * width * depth;
-}
+    static double CalculateVolume(double height, double width, double depth)
+    {
+        return height * width * depth;
+    }
 
-static void DisplayResults(double height, double width, double depth, double volume)
-{
-    Console.WriteLine($"\nHeight: {height}");
-    Console.WriteLine($"Width : {width}");
-    Console.WriteLine($"Depth : {depth}");
-    Console.WriteLine($"Volume: {volume}");
-}
+    static void DisplayResults(double height, double width, double depth, double volume)
+    {
+        Console.WriteLine($"\nHeight: {height}");
+        Console.WriteLine($"Width : {width}");
+        Console.WriteLine($"Depth : {depth}");
+        Console.WriteLine($"Volume: {volume}");
+    }
 
-static void Main()
-{
-    double height = GetDimension("height");
-    double width = GetDimension("width");
-    double depth = GetDimension("depth");
+    static void Main()
+    {
+        double height = GetDimension("height");
+        double width = GetDimension("width");
+        double depth = GetDimension("depth");
 
-    double volume = CalculateVolume(height, width, depth);
+        double volume = CalculateVolume(height, width, depth);
 
-    DisplayResults(height, width, depth, volume);
-}
+        DisplayResults(height, width, depth, volume);
+    }
 }
 </code></pre>
                             </details>
