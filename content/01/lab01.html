@@ -231,30 +231,30 @@ using System;
 
 class Program
 {
-static void Main()
-{
-// Declare variables
-int number1;
-int number2;
-int product;
-string userInput;
+    static void Main()
+    {
+        // Declare variables
+        int number1;
+        int number2;
+        int product;
+        string userInput;
 
-// Prompt user for input (note the space after the colon)
-Console.Write("Enter the first number: ");
-// Read user input, convert to int, and assign to a variable.
-userInput = Console.ReadLine();
-number1 = Convert.ToInt32(userInput);
+        // Prompt user for input (note the space after the colon)
+        Console.Write("Enter the first number: ");
+        // Read user input, convert to int, and assign to a variable.
+        userInput = Console.ReadLine();
+        number1 = Convert.ToInt32(userInput);
 
-Console.Write("Enter the second number: ");
-userInput = Console.ReadLine();
-number2 = Convert.ToInt32(userInput);
+        Console.Write("Enter the second number: ");
+        userInput = Console.ReadLine();
+        number2 = Convert.ToInt32(userInput);
 
-// assign the value of the product on the right to the variable on the left
-product = number1 * number2;
+        // assign the value of the product on the right to the variable on the left
+        product = number1 * number2;
 
-// Output the result. The $ sign allows you to use variables in the string.
-Console.WriteLine($"The product of {number1} and {number2} is {product}.");
-}
+        // Output the result. The $ sign allows you to use variables in the string.
+        Console.WriteLine($"The product of {number1} and {number2} is {product}.");
+    }
 }
                         </pre>
                             <p>
