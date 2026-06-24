@@ -1,0 +1,278 @@
+<h1>Array Fundamentals</h1>
+<div class="container my-4 px-2">
+    <div class="card"> <!-- .card overview -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#overview" aria-expanded="true"
+                aria-controls="overview">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                About Arrays
+            </button>
+        </div> <!-- .card-header -->
+        <div id="overview" class="collapse show">
+            <div class="card-body">
+                <h3>First, Arrays are a variable type</h3>
+                <p>
+                    An array is a fundamental data structure in programming that 
+                    allows you to store a collection of elements of the same type 
+                    under a single variable name. Arrays are commonly used for 
+                    organizing and manipulating data efficiently.
+                </p>
+                <p>
+                    Yes, an array can hold a collection and all the other things 
+                    that you may have heard about arrays, but first and foremost,
+                    an array is a <strong>variable type</strong>.
+                </p>
+                <p>
+                    Recall what you know about variables, this means 
+                    that an array must have a known size and set of rules, and it 
+                    must address a location in memory.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (overview) -->
+    <div class="card"> <!-- .card memory -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#memory" aria-expanded="true"
+                aria-controls="memory">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Arrays in Memory
+            </button>
+        </div> <!-- .card-header -->
+        <div id="memory" class="collapse show">
+            <div class="card-body">                                   
+                <h3 style="font-style: italic;">
+                    How much space do I need?
+                </h3>
+                <p>
+                    All elements of an array must be the same type (and size!), and 
+                    the number of elements must be known when it is declared. When 
+                    the compiler identifies the space required for any variable, it 
+                    needs to know how much space is required.
+                </p>
+                <div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 1em;">
+                <h4 style="font-style: italic;">
+                    An array is stored in <strong>contiguous</strong> memory
+                </h4>
+                <p>
+                    The application will map any variable to an actual location in 
+                    memory. Arrays are no different.
+                </p>
+                <p>
+                    <strong><em>Contiguous</em></strong> not <em>continuous</em>!
+                </p>
+                <p>
+                    Contiguous memory means that the memory allocated for an
+                    array is a single block of memory, where each element is stored
+                    in a sequential manner, one after the other, without any gaps
+                    or interruptions.
+                </p>
+                <p style="font-style: italic;">
+                    Continous means there is no end --ever. That would be amazing!
+                </p>
+                </div>
+                <p>
+                    The address of an array maps to the start of the block of memory
+                    reserved to store its data.
+                </p>
+                <p>Since each element is the same size 
+                    (type), if the first element is stored at the start of the block, 
+                    finding the second one is simply a matter of moving through the 
+                    memory, past exactly the size of the first element. Getting to 
+                    the third means starting from the beginning and going past the 
+                    first two (2) elements.
+                </p>
+                <p>
+                    We call this the index of the array element. So, <code>myArray[5]</code> 
+                    is referring to an element located past the first 5 items counted 
+                    from the beginning of the memory block, or the sixth element.
+                </p>
+                <p>
+                    <code>myArray[5]</code> contains the sixth element of the array.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (overview) -->
+    <div class="card"> <!-- .card counting -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#counting" aria-expanded="true"
+                aria-controls="counting">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                <em>Counting from Zero?</em>
+            </button>
+        </div> <!-- .card-header -->
+        <div id="counting" class="collapse show">
+            <div class="card-body">
+                <p>
+                    It seems that I have this discussion with colleagues almost
+                    every year. I've been told that <em>hardware-guys</em> count
+                    from one, but <em>software-guys</em> count from zero.
+                </p>
+                <p>
+                    And yet, when I hold up my hand and ask how many fingers I am 
+                    holding up, I get the same answer from both groups.
+                </p>
+                <p>
+                    I maintain that this is nonsense. We, collectively, all count 
+                    from the first element as <em>one</em>.
+                </p>
+                <p>
+                    Don't make this more complicated than it needs to be.
+                </p>
+                <p>
+                    An array index, or subscript, is a <em>memory offset</em> from 
+                    the starting memory address.
+                </p>
+                <img src="/course-content/images/array.png" style="margin:auto; margin-bottom: 1em;"
+                    alt="Array Indexing" class="img-fluid" />
+                <p>
+                    Consider the image. On a whiteboard, I can easily demonstrate 
+                    moving from the first element to the second and so on. But if 
+                    you think about it, this is not a very efficient way for a computer
+                    to find something in memory.
+                </p>
+                <p>
+                    Instead of "moving" to the first element, and "counting" to the 
+                    next, the computer can simply calculate the address by taking
+                    the base address and adding the size of the element, since they're
+                    all the same size, and multipying by the index to get the offset.
+                </p>
+                <p>
+                    Consider an array of integers, each 4 bytes in size:
+                </p>
+                <p>
+                    If the array is at address <code>0x1000</code>, mapped by the 
+                    variable name, like any other variable. Then the first element
+                    is at that address plus zero times the size of the elements
+                    (4 bytes), so zero bytes. So the first element is at
+                        <code>0x1000</code>. 
+                </p>
+                <p>
+                    The second element is at <code>0x1000 + (1 * 4) = 0x1004</code>, 
+                    and the third element is at <code>0x1000 + (2 * 4) = 0x1008</code>.
+                </p>
+                <p>
+                    But the computer doesn't have to "count" to find the item. To get
+                    to the two-hundred and thirteenth element, <code>arr[212]</code>,
+                    the computer simply calculates the offset: 212 times the size of
+                    the element, which is 4 bytes, and adds that to the base address.
+                </p>
+                <p>
+                    So when you see an <strong>array index</strong>, or subscript, it is
+                    simply a memory <strong>offset</strong> from the base address of the
+                    array.
+                </p>
+                <p style="font-style: italic; text-align: center; font-size: larger; font-weight: bold;">
+                    Index = offset
+                </p>
+                <p>
+                    And, understanding this, you can go back to counting from one, like 
+                    the rest of us.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (counting) -->
+    <div class="card"> <!-- .card rules -->
+        <div class="card-header">
+            <button class="btn btn-link text-decoration-none text-dark fw-bold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#rules" aria-expanded="true"
+                aria-controls="rules">
+                <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                <span class="icon"><i class="fas fa-chevron-up"></i></span>
+                Using Arrays
+            </button>
+        </div> <!-- .card-header -->
+        <div id="rules" class="collapse show">
+            <div class="card-body">
+                <h3>Declaring Arrays</h3>
+                <p>
+                    Arrays are declared by specifying the data type of the elements 
+                    they will contain, followed by the array name and the size of 
+                    the array (number of elements).
+                </p>
+                <p>
+                    <em>Why?</em> Because the application has to know how much space 
+                    it needs.
+                </p>
+                <p>
+                    The size of the array must be known when it is declared. Since 
+                    we have to have a contiguous block of memory, the size cannot 
+                    change after the array is declared.
+                </p>
+                <p>
+                    If you need to have more elements later, the computer will not
+                    add size to the array. Instead it will create a new array in another
+                    location that is the correct size, copy the elements from the
+                    old array to the new one, and then delete the old array.
+                </p>
+                <p>
+                    Understanding how the computer accesses the elements, makes this 
+                    clearer. If the computer had to jump around in memory to find the 
+                    next element, items would be slower to access or be lost.
+                </p>
+
+                <h3>Assigning Values to Arrays</h3>
+                <p>
+                    Once declared, you can assign values to individual elements of the 
+                    array using indexing. Indexing starts at 0 for the first element and 
+                    goes up to the size of the array minus one.
+                </p>
+                <h3>Storing and Retrieving Elements</h3>
+                <p>
+                    Elements in an array are stored sequentially in memory, allowing for 
+                    fast access based on their index. You can retrieve elements by 
+                    specifying their index within square brackets.
+                </p>
+                <p>
+                <pre><code>
+                # Python
+                myArray = [10, 20, 30]
+                print(myArray[0])  # Output: 10
+                print(myArray[2])  # Output: 30
+                </code></pre>
+                </p>
+                <p>
+                <pre><code>
+                // C#
+                int[] myArray = { 10, 20, 30 };
+                Console.WriteLine(myArray[0]);  // Output: 10
+                Console.WriteLine(myArray[2]);  // Output: 30
+                </code></pre>
+                </p>
+                <p>
+                <pre><code>
+                // Java
+                int[] myArray = { 10, 20, 30 };
+                System.out.println(myArray[0]);  // Output: 10
+                System.out.println(myArray[2]);  // Output: 30
+                </code></pre>
+                </p>
+                <p>
+                    Arrays provide a convenient and efficient way to work with 
+                    collections of data in programming, making them a valuable tool 
+                    for various tasks.
+                </p>
+                <p>&nbsp;</p>
+                <p>
+                    These rules for how to create and use arrays are important, 
+                    but if you understand how arrays work, then the <em>why</em> 
+                    they work will make sense, and the rules will make more sense.
+                </p>
+                <p>&nbsp;</p>
+                <p>
+                    Later, you will learn about other data structures that
+                    can be used to store collections of data, such as lists, sets,
+                    and dictionaries. Each of these has its own rules and uses, but
+                    they all share the same fundamental concept of storing data in a
+                    structured way, and understanding arrays will help you
+                    grasp these other data structures more easily.
+                </p>
+            </div> <!-- .card-body -->
+        </div> <!-- .collapse -->
+    </div> <!-- .card (overview) -->
+</div> <!-- .container -->

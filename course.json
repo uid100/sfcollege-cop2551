@@ -108,6 +108,8 @@
                 "title": "Working with Arrays and Collections (Introduction)",
                 "pages": {
                     "overview": { "title": "Module 8 - Overview", "type": "content", "source": "content/08/module8.html" },
+                    "variables": { "title": "Variable Fundamentals", "type": "content", "source": "content/variables.html"},
+                    "arrays": { "title": "Arrays", "type": "content", "source": "content/arrays.html"},
                     "ch10": { "title": "Chapter 10. Using Arrays", "type": "content", "source": "content/08/ch10.html" },
                     "ch11": { "title": "Chapter 11. Parameter Arrays", "type": "content", "source": "content/08/ch11.html" },
                     "lab8": { "title": "Working with Arrays", "type": "content", "source": "content/08/lab08.html" },
