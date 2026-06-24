@@ -147,6 +147,7 @@
                 "title": "Wrap-up and Final Exam",
                 "pages": {
                     "overview": { "title": "Module 12 - Overview", "type": "content", "source": "content/12/module12.html" },
+                    "oop": { "title": "Module 12 - Overview", "type": "content", "source": "content/oop.html" },
                     "end": { "title": "End Module 12: Wrap-up", "type": "content", "source": "content/end-module.html"}
                 }
             },
